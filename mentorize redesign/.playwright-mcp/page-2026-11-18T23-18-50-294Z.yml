@@ -1,0 +1,275 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Mentorize Mentorize" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Mentorize" [ref=e5]
+        - generic [ref=e6]: Mentorize
+      - navigation "Menu Principal" [ref=e7]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Sobre" [ref=e10] [cursor=pointer]:
+              - /url: "#sobre"
+          - listitem [ref=e11]:
+            - link "O Processo" [ref=e12] [cursor=pointer]:
+              - /url: "#processo"
+          - listitem [ref=e13]:
+            - link "FAQ" [ref=e14] [cursor=pointer]:
+              - /url: "#faq"
+      - generic [ref=e15]:
+        - button "Pesquisar" [ref=e16] [cursor=pointer]
+        - link "Login" [ref=e20] [cursor=pointer]:
+          - /url: /login
+        - link "Cadastre-se" [ref=e21] [cursor=pointer]:
+          - /url: /cadastro
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e28]
+      - generic [ref=e31]:
+        - generic [ref=e32]: Mentorize
+        - heading "A sua plataforma de mentoria on-line" [level=1] [ref=e35]:
+          - generic [ref=e36]: A
+          - generic [ref=e37]: sua
+          - generic [ref=e38]: plataforma
+          - generic [ref=e39]: de mentoria on-line
+        - generic [ref=e40]:
+          - link "Por que ser Mentorado?" [ref=e41] [cursor=pointer]:
+            - /url: "#mentorado"
+          - link "Por que ser Mentor?" [ref=e48] [cursor=pointer]:
+            - /url: "#mentor"
+    - generic [ref=e56]:
+      - generic [ref=e57]: Sobre
+      - heading "O Mentorize é uma plataforma de mentoria on-line." [level=2] [ref=e63]
+      - generic [ref=e64]:
+        - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e68]
+        - generic [ref=e70]:
+          - paragraph [ref=e71]: Existimos para contribuir com o desenvolvimento de pessoas e carreiras a partir de um ambiente colaborativo, que permite o compartilhamento de conhecimento e experiências entre profissionais.
+          - paragraph [ref=e73]: É o lugar de quem acredita que um propósito transforma realidades. Um convite ao autoconhecimento e ao networking.
+          - paragraph [ref=e74]:
+            - text: "Faça parte desta experiência incrível:"
+            - strong [ref=e75]: mentorize-se!
+          - link "Cadastre-se Agora!" [ref=e77] [cursor=pointer]:
+            - /url: /cadastro
+    - generic [ref=e87]:
+      - generic [ref=e88]:
+        - heading "O Mentor" [level=2] [ref=e91]
+        - paragraph [ref=e93]: Por meio de seu conhecimento e sua experiência profissional, você vai contribuir com o desenvolvimento de outra pessoa, encorajando-a a definir metas e a traçar estratégias que serão capazes de potencializar suas habilidades.
+        - generic [ref=e94]:
+          - paragraph [ref=e95]:
+            - strong [ref=e96]: Por que você deve ser mentor?
+          - paragraph [ref=e97]: Porque você pode transformar uma carreira através da Mentoria On-line!
+        - link "OK, Quero ser Mentor!" [ref=e99] [cursor=pointer]:
+          - /url: /cadastro/mentor
+      - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e108]
+    - generic [ref=e112]:
+      - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e115]
+      - generic [ref=e116]:
+        - heading "O Mentorado" [level=2] [ref=e119]
+        - paragraph [ref=e121]: É quem busca inspiração para conquistar uma carreira ainda mais promissora. É quem se compromete e se dedica aos objetivos estabelecidos para maximizar habilidades, com a colaboração do conhecimento e da experiência profissional de um mentor.
+        - generic [ref=e122]:
+          - paragraph [ref=e123]:
+            - strong [ref=e124]: Por que você deve ser mentorado?
+          - paragraph [ref=e125]: Porque você tem alguém ao seu lado para vencer desafios!
+        - link "OK, Quero ser Mentorado!" [ref=e127] [cursor=pointer]:
+          - /url: /cadastro/mentorado
+    - generic [ref=e134]:
+      - generic [ref=e135]:
+        - generic [ref=e136]: Etapas da Plataforma
+        - heading "O Processo" [level=2] [ref=e141]
+        - generic [ref=e142]:
+          - link "7 Passos (07)" [ref=e143] [cursor=pointer]:
+            - /url: "#cadastro"
+            - generic [ref=e144]: 7 Passos
+            - superscript: (07)
+          - button "Voltar etapa" [ref=e145] [cursor=pointer]
+          - button "Avançar etapa" [ref=e148] [cursor=pointer]
+      - region "Carrossel de etapas do processo" [ref=e151]:
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - generic [ref=e155] [cursor=pointer]:
+              - generic [ref=e156]: 01 · CADASTRO
+              - generic [ref=e165]:
+                - generic [ref=e166]: cadastro_rapido.form
+                - generic [ref=e169]: seu-email@mentorize.com.br
+                - generic [ref=e170]: Criar Conta Gratuita →
+              - generic [ref=e171]:
+                - heading "Passo 1" [level=3] [ref=e172]
+                - paragraph [ref=e173]: Faça seu cadastro no site.
+            - generic [ref=e174]:
+              - generic [ref=e175]: Passo 1 — Cadastro no Site
+              - generic [ref=e176]: →
+          - generic [ref=e177]:
+            - generic [ref=e179] [cursor=pointer]:
+              - generic [ref=e180]: 02 · OBJETIVOS
+              - generic [ref=e188]:
+                - generic [ref=e189]: "Áreas de Interesse Selecionadas:"
+                - generic [ref=e190]:
+                  - generic [ref=e191]: Tecnologia
+                  - generic [ref=e192]: Liderança
+                  - generic [ref=e193]: Carreira
+                  - generic [ref=e194]: Negócios
+              - generic [ref=e195]:
+                - heading "Passo 2" [level=3] [ref=e196]
+                - paragraph [ref=e197]: Informe suas áreas de interesse e seu objetivo de carreira.
+            - generic [ref=e198]:
+              - generic [ref=e199]: Passo 2 — Interesses & Metas
+              - generic [ref=e200]: →
+          - generic [ref=e201]:
+            - generic [ref=e203] [cursor=pointer]:
+              - generic [ref=e204]: 03 · DISPONIBILIDADE
+              - generic [ref=e215]:
+                - generic [ref=e216]:
+                  - generic [ref=e217]: Dias da Semana
+                  - generic [ref=e218]: 3 disponíveis
+                - generic [ref=e219]:
+                  - generic [ref=e220]: SEG
+                  - generic [ref=e221]: TER
+                  - generic [ref=e222]: QUA
+                  - generic [ref=e223]: QUI
+                  - generic [ref=e224]: SEX
+                - generic [ref=e225]: 19:00 — 21:00 (On-line)
+              - generic [ref=e230]:
+                - heading "Passo 3" [level=3] [ref=e231]
+                - paragraph [ref=e232]: Especifique dias e horários disponíveis para realizar as mentorias on-line.
+            - generic [ref=e233]:
+              - generic [ref=e234]: Passo 3 — Agenda & Horários
+              - generic [ref=e235]: →
+          - generic [ref=e236]:
+            - generic [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]: 04 · MATCHING
+              - generic [ref=e249]:
+                - generic [ref=e250]:
+                  - generic [ref=e251]: M
+                  - generic [ref=e252]:
+                    - generic [ref=e253]: Mentor Recomendado
+                    - generic [ref=e254]: Liderança & Gestão
+                - generic [ref=e255]: 98% MATCH
+              - generic [ref=e258]:
+                - heading "Passo 4" [level=3] [ref=e259]
+                - paragraph [ref=e260]: Veja quais são os mentores ou mentorados que têm o perfil parecido com o seu.
+            - generic [ref=e261]:
+              - generic [ref=e262]: Passo 4 — Match de Perfis
+              - generic [ref=e263]: →
+          - generic [ref=e264]:
+            - generic [ref=e266] [cursor=pointer]:
+              - generic [ref=e267]: 05 · CONTATO
+              - generic [ref=e273]:
+                - generic [ref=e274]: "\"Olá! Adoraria agendar uma sessão de mentoria com você.\""
+                - generic [ref=e275]: Mensagem Direta
+              - generic [ref=e279]:
+                - heading "Passo 5" [level=3] [ref=e280]
+                - paragraph [ref=e281]: Entre em contato com o mentor ou mentorado escolhido.
+            - generic [ref=e282]:
+              - generic [ref=e283]: Passo 5 — Primeiro Contato
+              - generic [ref=e284]: →
+          - generic [ref=e285]:
+            - generic [ref=e287] [cursor=pointer]:
+              - generic [ref=e288]: 06 · CONFIRMAÇÃO
+              - generic [ref=e296]:
+                - generic [ref=e297]: Convite Aceito com Sucesso!
+                - generic [ref=e300]: Data e link da sala de mentoria adicionados à sua agenda.
+              - generic [ref=e301]:
+                - heading "Passo 6" [level=3] [ref=e302]
+                - paragraph [ref=e303]: Aguarde o aceite de seu convite para iniciar o processo.
+            - generic [ref=e304]:
+              - generic [ref=e305]: Passo 6 — Confirmação de Convite
+              - generic [ref=e306]: →
+          - generic [ref=e307]:
+            - generic [ref=e309] [cursor=pointer]:
+              - generic [ref=e310]: 07 · AO VIVO
+              - generic [ref=e317]:
+                - generic [ref=e318]:
+                  - generic [ref=e319]: SALA AO VIVO
+                  - generic [ref=e322]: 45:00
+                - generic [ref=e323]:
+                  - generic [ref=e324]: Mentor
+                  - generic [ref=e325]: Você
+              - generic [ref=e326]:
+                - heading "Passo 7" [level=3] [ref=e327]
+                - paragraph [ref=e328]: Após a solicitação ser aceita, comece a sua mentoria on-line.
+            - generic [ref=e329]:
+              - generic [ref=e330]: Passo 7 — Início da Mentoria On-line
+              - generic [ref=e331]: →
+    - generic [ref=e333]:
+      - generic [ref=e334]:
+        - generic [ref=e335]: FAQ
+        - heading "FAQ" [level=2] [ref=e339]
+      - generic [ref=e340]:
+        - generic [ref=e341]:
+          - generic [ref=e342]:
+            - button [expanded] [ref=e343] [cursor=pointer]:
+              - heading "O que é mentoria?" [level=5] [ref=e344]
+            - paragraph [ref=e349]: É uma orientação onde um profissional mais experiente compartilha seu conhecimento e suas experiências com profissionais mais jovens no mercado. Ou seja, é um processo de aconselhamento para o desenvolvimento de carreiras.
+          - generic [ref=e350]:
+            - button [ref=e351] [cursor=pointer]:
+              - heading "Como acontecerá a mentoria?" [level=5] [ref=e352]
+            - paragraph [ref=e356]: Todos os encontros de mentoria acontecerão por meio de uma plataforma de videoconferência. Nos dias e horários agendados mentor e mentorado receberão uma notificação, via e-mail, para que acessem suas páginas pessoais e iniciem a mentoria.
+          - generic [ref=e357]:
+            - button [ref=e358] [cursor=pointer]:
+              - heading "Qual é o tempo de cada mentoria?" [level=5] [ref=e359]
+            - generic:
+              - paragraph [ref=e363]: "As sessões de mentoria terão, no máximo, 1h30. Além disso, mentor e mentorado decidirão, em comum acordo, se elas acontecerão:"
+              - list [ref=e364]:
+                - listitem [ref=e365]: Semanalmente;
+                - listitem [ref=e366]: Quinzenalmente;
+                - listitem [ref=e367]: Mensalmente.
+          - generic [ref=e368]:
+            - button [ref=e369] [cursor=pointer]:
+              - heading "A mentoria acontece em quantos encontros?" [level=5] [ref=e370]
+            - paragraph [ref=e374]: A quantidade de encontros irá depender de uma avaliação prévia, feita pelo(a) mentor(a), do resultado que o(a) mentorado(a) deseja conquistar. Somente após essa análise o número de encontros é definido.
+        - generic [ref=e375]:
+          - generic [ref=e376]:
+            - button [ref=e377] [cursor=pointer]:
+              - heading "Quem é o público-alvo do Mentorize?" [level=5] [ref=e378]
+            - paragraph [ref=e382]: Pessoas que desejam se desenvolver profissionalmente, independentemente de sua área de formação ou de atuação no mercado.
+          - generic [ref=e383]:
+            - button [ref=e384] [cursor=pointer]:
+              - heading "Quem pode ser mentor?" [level=5] [ref=e385]
+            - generic:
+              - paragraph [ref=e389]: "Profissional que tenha conhecimento e experiência em sua área de atuação, podendo ser:"
+              - list [ref=e390]:
+                - listitem [ref=e391]: Especialista;
+                - listitem [ref=e392]: Consultor;
+                - listitem [ref=e393]: Coordenador;
+                - listitem [ref=e394]: Gerente;
+                - listitem [ref=e395]: Superintendente;
+                - listitem [ref=e396]: Diretor;
+                - listitem [ref=e397]: CEO.
+              - paragraph [ref=e398]: O mais importante é contribuir com a transformação na carreira do(a) mentorado(a)!
+          - generic [ref=e399]:
+            - button [ref=e400] [cursor=pointer]:
+              - heading "Quem pode ser mentorado?" [level=5] [ref=e401]
+            - paragraph [ref=e405]: Profissionais que desejam dar um novo rumo às suas carreiras, estando dispostos a aprender e a colocar em prática as ações propostas pelo(a) mentor(a).
+          - generic [ref=e406]:
+            - button [ref=e407] [cursor=pointer]:
+              - heading "As mentorias são pagas?" [level=5] [ref=e408]
+            - paragraph [ref=e412]: Sim. Todas as mentorias são pagas e os valores das sessões variam de acordo com o conhecimento e com a experiência de cada mentor(a).
+      - link "Cadastre-se Agora!" [ref=e414] [cursor=pointer]:
+        - /url: /cadastro
+  - contentinfo [ref=e421]:
+    - generic [ref=e423]:
+      - generic [ref=e424]:
+        - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e426]
+        - generic [ref=e427]: Mentorize-se
+        - heading "Cadastre-se Agora" [level=2] [ref=e431]
+        - paragraph [ref=e432]: Faça parte da plataforma de mentoria on-line e conecte-se com profissionais experientes para acelerar o seu desenvolvimento.
+        - generic [ref=e433]:
+          - link "Quero me Cadastrar" [ref=e434] [cursor=pointer]:
+            - /url: /cadastro
+          - link "Já tenho conta" [ref=e438] [cursor=pointer]:
+            - /url: /login
+      - generic [ref=e440]:
+        - generic [ref=e441]: © 2026 - Mentorize - Todos os Direitos Reservados
+        - generic [ref=e443]:
+          - generic [ref=e444]: "Fale conosco:"
+          - link "contato@mentorize.com.br" [ref=e445] [cursor=pointer]:
+            - /url: mailto:contato@mentorize.com.br
+        - generic [ref=e446]:
+          - link "E-mail Mentorize" [ref=e447] [cursor=pointer]:
+            - /url: mailto:contato@mentorize.com.br
+          - link "X (Twitter)" [ref=e453] [cursor=pointer]:
+            - /url: https://x.com/
+          - link "LinkedIn" [ref=e459] [cursor=pointer]:
+            - /url: https://linkedin.com/
+          - link "Instagram" [ref=e465] [cursor=pointer]:
+            - /url: https://instagram.com/

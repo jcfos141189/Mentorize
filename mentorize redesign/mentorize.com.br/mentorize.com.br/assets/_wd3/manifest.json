@@ -1,0 +1,631 @@
+{
+ "entryUrl": "https://www.mentorize.com.br/",
+ "capturedAt": "2026-11-16T18:34:41+00:00",
+ "indexHtml": {
+  "kind": "arquivo",
+  "description": "site vivo aberto com duplo clique (file://): um runtime faz o papel do Service Worker; imagens e vídeos que a página só exibe são lidos de assets/, o resto (CSS, JS, fontes, dados, imagens de WebGL) vai embutido no index.html"
+ },
+ "files": [
+  {
+   "url": "https://www.mentorize.com.br/",
+   "file": "assets/www.mentorize.com.br/index.html",
+   "type": "text/html",
+   "resourceType": "document",
+   "size": 80949,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/modules/system/assets/css/framework.extras-min.css",
+   "file": "assets/www.mentorize.com.br/modules/system/assets/css/framework.extras-min.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 5062,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/modules/system/assets/js/framework.combined-min.js",
+   "file": "assets/www.mentorize.com.br/modules/system/assets/js/framework.combined-min.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 15677,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/magnific_popup.css",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/magnific_popup.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 8143,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/shortcode.css",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/shortcode.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 36263,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/shortcode_responsive.css",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/shortcode_responsive.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 4010,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/style.css",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/style.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 422176,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/fonts/modules.ttf",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/fonts/modules.ttf",
+   "type": "application/x-font-ttf",
+   "resourceType": "font",
+   "size": 82920,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/bg-header2-01.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/bg-header2-01.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 18292,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-footer.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-footer.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 11204,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-header.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-header.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 11264,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-192x192.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-192x192.png",
+   "type": "image/png",
+   "resourceType": "other",
+   "size": 26625,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-32x32.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-32x32.png",
+   "type": "image/webp",
+   "resourceType": "other",
+   "size": 950,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/favicon/favicon.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/favicon/favicon.png",
+   "type": "image/png",
+   "resourceType": "other",
+   "size": 6575,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo1.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo1.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 990,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo2.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo2.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1466,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo3.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo3.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1076,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo4.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo4.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1514,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo5.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo5.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1170,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo6.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo6.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1092,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo7.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo7.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1350,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorado.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorado.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 25776,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorize.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorize.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 38326,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "mobile",
+    "desktop"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/images-04.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/images-04.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 25738,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/interface-02.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/interface-02.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 30390,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize-w.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize-w.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 1072,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize.png",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize.png",
+   "type": "image/webp",
+   "resourceType": "image",
+   "size": 7202,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/custom.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/custom.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 45668,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/fitvids.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/fitvids.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 3301,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder-functions.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder-functions.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 4524,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 144734,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/ga-frontend.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/ga-frontend.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 8112,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/jquery-mobile-custom.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/jquery-mobile-custom.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 7786,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/magnific-popup.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/magnific-popup.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 22405,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/smoothscroll.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/smoothscroll.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 14472,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/waypoints.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/waypoints.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 8841,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/wp-embed.js",
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/wp-embed.js",
+   "type": "application/x-javascript",
+   "resourceType": "script",
+   "size": 1398,
+   "status": 200,
+   "party": "first",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "site"
+  },
+  {
+   "url": "https://code.jquery.com/jquery-1.12.4.min.js",
+   "file": "assets/code.jquery.com/jquery-1.12.4.min.js",
+   "type": "application/javascript",
+   "resourceType": "script",
+   "size": 97163,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "library": {
+    "name": "jquery",
+    "version": "1.12.4"
+   },
+   "role": "library"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Merriweather:300",
+   "file": "assets/fonts.googleapis.com/css__q014767b8.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 2221,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "third-party"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Droid+Sans:400,700&subset=latin",
+   "file": "assets/fonts.googleapis.com/css__q2fc142c3.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 796,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "role": "third-party"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Bitter:400,400italic,700&subset=latin,latin-ext",
+   "file": "assets/fonts.googleapis.com/css__q37c5957c.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 5311,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "role": "third-party"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Slabo+27px",
+   "file": "assets/fonts.googleapis.com/css__q3a1263dc.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 823,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "third-party"
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext",
+   "file": "assets/fonts.googleapis.com/css__q8c5fa584.css",
+   "type": "text/css",
+   "resourceType": "stylesheet",
+   "size": 58445,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "role": "third-party"
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/bitter/v42/rax8HiqOu8IVPmn7f4xpLjpSmw.woff2",
+   "file": "assets/fonts.gstatic.com/s/bitter/v42/rax8HiqOu8IVPmn7f4xpLjpSmw.woff2",
+   "type": "font/woff2",
+   "resourceType": "font",
+   "size": 34156,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/droidsans/v19/SlGVmQWMvZQIdix7AFxXkHNSbRYXags.woff2",
+   "file": "assets/fonts.gstatic.com/s/droidsans/v19/SlGVmQWMvZQIdix7AFxXkHNSbRYXags.woff2",
+   "type": "font/woff2",
+   "resourceType": "font",
+   "size": 11264,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/droidsans/v19/SlGWmQWMvZQIdix7AFxXmMh3eDs1ZyHKpWg.woff2",
+   "file": "assets/fonts.gstatic.com/s/droidsans/v19/SlGWmQWMvZQIdix7AFxXmMh3eDs1ZyHKpWg.woff2",
+   "type": "font/woff2",
+   "resourceType": "font",
+   "size": 11392,
+   "status": 200,
+   "party": "third",
+   "passes": [
+    "desktop",
+    "mobile"
+   ]
+  }
+ ]
+}

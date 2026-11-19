@@ -1,0 +1,1125 @@
+{
+ "version": 1,
+ "tool": "wd3 0.1.0",
+ "captureId": "mentorize.com.br-edbda4bb",
+ "capturedAt": "2026-11-16T18:34:41+00:00",
+ "entry": {
+  "url": "https://www.mentorize.com.br/",
+  "path": "/",
+  "search": "",
+  "file": "assets/www.mentorize.com.br/index.html",
+  "contentType": "text/html; charset=UTF-8"
+ },
+ "blocked": [
+  "^https?://([^/?#]+\\.)?(google\\-analytics\\.com|analytics\\.google\\.com|googletagmanager\\.com|googleadservices\\.com|doubleclick\\.net|googlesyndication\\.com|googleoptimize\\.com|connect\\.facebook\\.net|bat\\.bing\\.com|snap\\.licdn\\.com|px\\.ads\\.linkedin\\.com|analytics\\.tiktok\\.com|ct\\.pinterest\\.com|static\\.ads\\-twitter\\.com|analytics\\.twitter\\.com|tr\\.snapchat\\.com|sc\\-static\\.net|mc\\.yandex\\.ru|hotjar\\.com|hotjar\\.io|clarity\\.ms|cdn\\.segment\\.com|api\\.segment\\.io|cdn\\.mxpnl\\.com|api\\-js\\.mixpanel\\.com|api\\.mixpanel\\.com|api\\.amplitude\\.com|api2\\.amplitude\\.com|api\\-secure\\.amplitude\\.com|api\\-sr\\.amplitude\\.com|sr\\-client\\-cfg\\.amplitude\\.com|plausible\\.io|cloud\\.umami\\.is|analytics\\.umami\\.is|static\\.cloudflareinsights\\.com|cloudflareinsights\\.com|vitals\\.vercel\\-insights\\.com|browser\\-intake\\-datadoghq\\.com|browser\\-intake\\-datadoghq\\.eu|js\\-agent\\.newrelic\\.com|bam\\.nr\\-data\\.net|bam\\-cell\\.nr\\-data\\.net|fullstory\\.com|script\\.crazyegg\\.com|mouseflow\\.com|smartlook\\.com|heapanalytics\\.com|i\\.posthog\\.com|stats\\.wp\\.com|pixel\\.wp\\.com|promotekit\\.com|ingest\\.sentry\\.io|ingest\\.us\\.sentry\\.io|ingest\\.de\\.sentry\\.io|widget\\.intercom\\.io|js\\.intercomcdn\\.com|api\\-iam\\.intercom\\.io|js\\.hs\\-scripts\\.com|js\\.hs\\-analytics\\.net|js\\.hs\\-banner\\.com|js\\.hscollectedforms\\.net|js\\.usemessages\\.com|track\\.hubspot\\.com|client\\.crisp\\.chat|embed\\.tawk\\.to|js\\.driftt\\.com|static\\.zdassets\\.com|ekr\\.zdassets\\.com|cdn\\.cookielaw\\.org|geolocation\\.onetrust\\.com|consent\\.cookiebot\\.com|consentcdn\\.cookiebot\\.com|app\\.usercentrics\\.eu|api\\.usercentrics\\.eu|cdn\\.iubenda\\.com|cmp\\.osano\\.com|cdn\\.termly\\.io)(:\\d+)?([/?#]|$)",
+  "/rpc/increment_shared_code_views",
+  "^https?://(umami|analytics|stats|plausible)\\.[^/]+/(api/send|api/collect|api/event|script\\.js)",
+  "/g/c(ollect)?\\?v=2&",
+  "sentry\\.io/api/\\d+/(envelope|store)",
+  "/api/meta-capi",
+  "^https?://(leadtracker|tracking|track|events?|collect)\\.[^/]+/",
+  "^https?://a\\.vturb\\.com/",
+  "facebook\\.com/tr[/?]",
+  "/_vercel/(speed-)?insights/",
+  "/cdn-cgi/rum",
+  "/cdn-cgi/challenge-platform/",
+  "google\\.com/(pagead|ads)/"
+ ],
+ "volatileParams": [
+  "v",
+  "_rsc",
+  "dpl",
+  "_",
+  "t",
+  "ts",
+  "timestamp",
+  "cb",
+  "cachebust",
+  "cacheBust",
+  "nocache",
+  "rnd",
+  "rand",
+  "random",
+  "_t"
+ ],
+ "entries": [
+  {
+   "url": "https://www.mentorize.com.br/",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/html; charset=UTF-8",
+   "headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "DYNAMIC",
+    "x-hcdn-request-id": "9eaa8cc855ff0465fed3287d075ffe72-imm-edge10",
+    "x-hcdn-upstream-rt": "0.356"
+   },
+   "resourceType": "document",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/index.html",
+   "size": 80949,
+   "modes": [
+    "navigate"
+   ]
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Slabo+27px",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css; charset=utf-8",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "text/css; charset=utf-8",
+    "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/fonts.googleapis.com/css__q3a1263dc.css",
+   "size": 823,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Bitter:400,400italic,700&subset=latin,latin-ext",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css; charset=utf-8",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "text/css; charset=utf-8",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "file": "assets/fonts.googleapis.com/css__q37c5957c.css",
+   "size": 5311,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Droid+Sans:400,700&subset=latin",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css; charset=utf-8",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "text/css; charset=utf-8",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "file": "assets/fonts.googleapis.com/css__q2fc142c3.css",
+   "size": 796,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Merriweather:300",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css; charset=utf-8",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "text/css; charset=utf-8",
+    "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/fonts.googleapis.com/css__q014767b8.css",
+   "size": 2221,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css; charset=utf-8",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "text/css; charset=utf-8",
+    "link": "<https://fonts.gstatic.com>; rel=preconnect; crossorigin",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/fonts.googleapis.com/css__q8c5fa584.css",
+   "size": 58445,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://code.jquery.com/jquery-1.12.4.min.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/javascript; charset=utf-8",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "application/javascript; charset=utf-8",
+    "x-cache-hits": "3, 28899"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/code.jquery.com/jquery-1.12.4.min.js",
+   "size": 97163,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/shortcode_responsive.css",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css",
+   "headers": {
+    "content-type": "text/css",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "174623ab21120d95d6e31229619a7d81-imm-edge10",
+    "x-hcdn-upstream-rt": "0.045"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/shortcode_responsive.css",
+   "size": 4010,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/style.css",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css",
+   "headers": {
+    "content-type": "text/css",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "4146b1c182b1fd817b6a370c6fa364ad-imm-edge10",
+    "x-hcdn-upstream-rt": "0.045"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/style.css",
+   "size": 422176,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/shortcode.css",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css",
+   "headers": {
+    "content-type": "text/css",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "233d14a6d560c0df545849020d5c9cca-imm-edge10",
+    "x-hcdn-upstream-rt": "0.052"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/shortcode.css",
+   "size": 36263,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/css/magnific_popup.css",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css",
+   "headers": {
+    "content-type": "text/css",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "b67622b1120561e1a586407680bac2fb-imm-edge10",
+    "x-hcdn-upstream-rt": "0.046"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/css/magnific_popup.css",
+   "size": 8143,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "aaea7569f1b69427ee10d26902f5aeb4-imm-edge10",
+    "x-hcdn-upstream-rt": "0.045"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize.png",
+   "size": 7202,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/ga-frontend.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "c6a4fb1b22c7998643295c7b031192de-imm-edge7",
+    "x-hcdn-upstream-rt": "0.047"
+   },
+   "resourceType": "script",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/ga-frontend.js",
+   "size": 8112,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorize.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "077e6401d6097220d1fc9b00182beb20-imm-edge7",
+    "x-hcdn-upstream-rt": "0.100"
+   },
+   "resourceType": "image",
+   "passes": [
+    "mobile",
+    "desktop"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorize.png",
+   "size": 38326,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/droidsans/v19/SlGWmQWMvZQIdix7AFxXmMh3eDs1ZyHKpWg.woff2",
+   "method": "GET",
+   "status": 200,
+   "contentType": "font/woff2",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "font/woff2",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/fonts.gstatic.com/s/droidsans/v19/SlGWmQWMvZQIdix7AFxXmMh3eDs1ZyHKpWg.woff2",
+   "size": 11392,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/droidsans/v19/SlGVmQWMvZQIdix7AFxXkHNSbRYXags.woff2",
+   "method": "GET",
+   "status": 200,
+   "contentType": "font/woff2",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "font/woff2",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/fonts.gstatic.com/s/droidsans/v19/SlGVmQWMvZQIdix7AFxXkHNSbRYXags.woff2",
+   "size": 11264,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://fonts.gstatic.com/s/bitter/v42/rax8HiqOu8IVPmn7f4xpLjpSmw.woff2",
+   "method": "GET",
+   "status": 200,
+   "contentType": "font/woff2",
+   "headers": {
+    "access-control-allow-origin": "*",
+    "content-type": "font/woff2",
+    "timing-allow-origin": "*"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/fonts.gstatic.com/s/bitter/v42/rax8HiqOu8IVPmn7f4xpLjpSmw.woff2",
+   "size": 34156,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorado.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "f01638c8caffad9daad732b6c9f6d2dd-imm-edge7",
+    "x-hcdn-upstream-rt": "0.043"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ilustra-mentorado.png",
+   "size": 25776,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder-functions.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "998a22e2c51026bab69973009509b1b7-imm-edge7",
+    "x-hcdn-upstream-rt": "0.043"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder-functions.js",
+   "size": 4524,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/smoothscroll.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "e682b6120824dec5d9eb74ccae13e2a3-imm-edge7",
+    "x-hcdn-upstream-rt": "0.043"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/smoothscroll.js",
+   "size": 14472,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/wp-embed.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "ae7be4c5001078b069ec0bf9dd94d863-imm-edge7",
+    "x-hcdn-upstream-rt": "0.046"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/wp-embed.js",
+   "size": 1398,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/waypoints.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "76b139803c7c0eacc40dd6817e650c0a-imm-edge7",
+    "x-hcdn-upstream-rt": "0.047"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/waypoints.js",
+   "size": 8841,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/fitvids.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "0590ee7825bb169d6d157bf29cf9aafa-imm-edge7",
+    "x-hcdn-upstream-rt": "0.050"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/fitvids.js",
+   "size": 3301,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "cd2d1799f7c8325852d9098f11e2a34f-imm-edge7",
+    "x-hcdn-upstream-rt": "0.044"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/frontend-builder.js",
+   "size": 144734,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/custom.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "e7be3008e4e9a4513dcac4a2f03e4ea8-imm-edge7",
+    "x-hcdn-upstream-rt": "0.053"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/custom.js",
+   "size": 45668,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/modules/system/assets/css/framework.extras-min.css",
+   "method": "GET",
+   "status": 200,
+   "contentType": "text/css",
+   "headers": {
+    "content-type": "text/css",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "cc4abe3de73aaf0418161dc3a62088c1-imm-edge7",
+    "x-hcdn-upstream-rt": "0.063"
+   },
+   "resourceType": "stylesheet",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/modules/system/assets/css/framework.extras-min.css",
+   "size": 5062,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo4.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "0f63de63ffc05412582b99e754a4ad1a-imm-edge7",
+    "x-hcdn-upstream-rt": "0.063"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo4.png",
+   "size": 1514,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo5.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "0845a0fff5ee1d2db5fbaf9ea8e1c534-imm-edge7",
+    "x-hcdn-upstream-rt": "0.065"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo5.png",
+   "size": 1170,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo1.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "75856fe4a770d0272d7020412652f551-imm-edge7",
+    "x-hcdn-upstream-rt": "0.066"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo1.png",
+   "size": 990,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo6.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "96648c045eeeb3de0336af3de762233b-imm-edge7",
+    "x-hcdn-upstream-rt": "0.066"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo6.png",
+   "size": 1092,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo7.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "2dc60decd3820a81e93e97b957d24de7-imm-edge7",
+    "x-hcdn-upstream-rt": "0.066"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo7.png",
+   "size": 1350,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize-w.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "4e1ce8d0fdd32da8cc1668d676aebdac-imm-edge7",
+    "x-hcdn-upstream-rt": "0.080"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/logo-mentorize-w.png",
+   "size": 1072,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo3.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "3db022b8e54db0ab36033a0561ba7b7c-imm-edge7",
+    "x-hcdn-upstream-rt": "0.082"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo3.png",
+   "size": 1076,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/fonts/modules.ttf",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-font-ttf",
+   "headers": {
+    "content-type": "application/x-font-ttf",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "abd13c2462daac2b795b666c2c5ebc69-imm-edge7",
+    "x-hcdn-upstream-rt": "0.048"
+   },
+   "resourceType": "font",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/fonts/modules.ttf",
+   "size": 82920,
+   "modes": [
+    "cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/magnific-popup.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "175d118e4da0cc1ad95440b3fb368fd5-imm-edge7",
+    "x-hcdn-upstream-rt": "0.059"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/magnific-popup.js",
+   "size": 22405,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/js/jquery-mobile-custom.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "82d13c53a5a6ee5992dcb27016a6fbf1-imm-edge7",
+    "x-hcdn-upstream-rt": "0.064"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/js/jquery-mobile-custom.js",
+   "size": 7786,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/modules/system/assets/js/framework.combined-min.js",
+   "method": "GET",
+   "status": 200,
+   "contentType": "application/x-javascript",
+   "headers": {
+    "content-type": "application/x-javascript",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "c8ce898fb2cf74160f222f43bfd234cf-imm-edge7",
+    "x-hcdn-upstream-rt": "0.081"
+   },
+   "resourceType": "script",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/modules/system/assets/js/framework.combined-min.js",
+   "size": 15677,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/images-04.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "9537e0ded33b22ee533a891e56d1d6b3-imm-edge7",
+    "x-hcdn-upstream-rt": "0.107"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/images-04.png",
+   "size": 25738,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/ico-passo2.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "0934b684ffd4f72b1cc291257ec0e936-imm-edge7",
+    "x-hcdn-upstream-rt": "0.125"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/ico-passo2.png",
+   "size": 1466,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/interface-02.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "72d04a9fe85d9208d22b48f28ba54650-imm-edge7",
+    "x-hcdn-upstream-rt": "0.153"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/interface-02.png",
+   "size": 30390,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/bg-header2-01.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "8955e08bf658bc8d908c28df70cb7b5c-imm-edge7",
+    "x-hcdn-upstream-rt": "0.042"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/bg-header2-01.png",
+   "size": 18292,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-footer.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "ab54bdde79062e4967a3a939717ca3f1-imm-edge7",
+    "x-hcdn-upstream-rt": "0.149"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-footer.png",
+   "size": 11204,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-header.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "462f8f1107887148d8886b8b1358bb0e-imm-edge7",
+    "x-hcdn-upstream-rt": "0.150"
+   },
+   "resourceType": "image",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/bg-processo-header.png",
+   "size": 11264,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/favicon/favicon.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "panel": "hpanel",
+    "platform": "hostinger",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "44c26b9f539e98a1461915bbb56a1925-imm-edge7",
+    "x-hcdn-upstream-rt": "0.044"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/favicon/favicon.png",
+   "size": 6575,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-32x32.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/webp",
+   "headers": {
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "content-type": "image/webp",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-request-id": "4c59f72e8313427b7f3ac09c53b0f735-imm-edge7",
+    "x-hcdn-upstream-rt": "0.051"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop",
+    "mobile"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-32x32.png",
+   "size": 950,
+   "modes": [
+    "no-cors"
+   ]
+  },
+  {
+   "url": "https://www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-192x192.png",
+   "method": "GET",
+   "status": 200,
+   "contentType": "image/png",
+   "headers": {
+    "content-type": "image/png",
+    "access-control-allow-methods": "GET, OPTIONS",
+    "access-control-allow-origin": "*",
+    "x-hcdn-request-id": "9905ff2de6cc3d7d5efdabf66abc9a4f-imm-edge10",
+    "x-hcdn-cache-status": "MISS",
+    "x-hcdn-upstream-rt": "0.052"
+   },
+   "resourceType": "other",
+   "passes": [
+    "desktop"
+   ],
+   "file": "assets/www.mentorize.com.br/themes/mentorize/assets/images/favicon/cropped-favicon-192x192.png",
+   "size": 26625
+  }
+ ],
+ "videos": {
+  "posters": {},
+  "onlineHosts": []
+ }
+}

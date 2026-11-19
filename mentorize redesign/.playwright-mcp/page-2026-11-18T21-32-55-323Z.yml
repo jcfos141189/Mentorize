@@ -1,0 +1,537 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e18]:
+    - generic:
+      - generic:
+        - navigation:
+          - generic:
+            - link "Hanzo — Overview" [ref=e19] [cursor=pointer]:
+              - /url: "#overview"
+              - paragraph [ref=e21]:
+                - strong [ref=e22]: Hanzo
+            - generic:
+              - link [ref=e23] [cursor=pointer]:
+                - /url: "#overview"
+                - paragraph [ref=e25]: Overview
+              - link [ref=e26] [cursor=pointer]:
+                - /url: "#components"
+                - paragraph [ref=e28]: Components
+  - iframe [ref=e29]:
+    - generic [ref=f1e3]:
+      - navigation [ref=f1e6]:
+        - generic [ref=f1e10] [cursor=pointer]
+      - generic [ref=f1e13]:
+        - generic [ref=f1e17]:
+          - generic [ref=f1e18]:
+            - paragraph [ref=f1e22]: Eiusmod Enim — 2 Minim Quis
+            - generic [ref=f1e23]:
+              - heading "H a n z o" [level=1] [ref=f1e25]:
+                - strong [ref=f1e26]:
+                  - generic [ref=f1e27]:
+                    - generic [ref=f1e28]: H
+                    - generic [ref=f1e29]: a
+                    - generic [ref=f1e30]: "n"
+                    - generic [ref=f1e31]: z
+                    - generic [ref=f1e32]: o
+              - generic [ref=f1e35]:
+                - list [ref=f1e37]
+                - group "Slideshow pagination controls"
+              - heading "D e s i g n" [level=1] [ref=f1e39]:
+                - strong [ref=f1e40]
+                - generic [ref=f1e41]:
+                  - generic [ref=f1e42]: D
+                  - generic [ref=f1e43]: e
+                  - generic [ref=f1e44]: s
+                  - generic [ref=f1e45]: i
+                  - generic [ref=f1e46]: g
+                  - generic [ref=f1e47]: "n"
+              - heading [level=1] [ref=f1e49]
+              - list [ref=f1e53]:
+                - listitem [ref=f1e54]
+                - listitem [ref=f1e60]
+                - listitem [ref=f1e66]
+                - listitem [ref=f1e72]
+              - heading "S y s t e m" [level=1] [ref=f1e79]:
+                - strong [ref=f1e80]:
+                  - generic [ref=f1e81]:
+                    - generic [ref=f1e82]: S
+                    - generic [ref=f1e83]: "y"
+                    - generic [ref=f1e84]: s
+                    - generic [ref=f1e85]: t
+                    - generic [ref=f1e86]: e
+                  - generic [ref=f1e87]: m
+            - paragraph [ref=f1e90]: Soft grey light, tight grotesk type and rounded pill buttons — calm, tactile and crisp.
+          - generic [ref=f1e91]:
+            - link [ref=f1e95] [cursor=pointer]:
+              - /url: https://stfn.lemonsqueezy.com/buy/6a3875eb-f614-4485-a256-49d0247956e4
+              - paragraph [ref=f1e97]:
+                - strong [ref=f1e98]: Cillum sint sunt
+            - paragraph [ref=f1e115]: Officia id Laborum
+        - generic [ref=f1e117]:
+          - generic [ref=f1e120]:
+            - list [ref=f1e124]:
+              - listitem [ref=f1e125]
+              - listitem [ref=f1e128]
+              - listitem [ref=f1e131]
+            - list [ref=f1e137]:
+              - listitem [ref=f1e138]
+              - listitem [ref=f1e141]
+              - listitem [ref=f1e144]
+          - link "Non Mollit Anim" [ref=f1e148] [cursor=pointer]:
+            - /url: https://hanzo.framer.website/#work
+            - generic:
+              - generic:
+                - paragraph:
+                  - strong: Non Mollit Anim
+        - generic [ref=f1e151]:
+          - heading [level=4] [ref=f1e156]:
+            - emphasis [ref=f1e157]: Magna!
+          - generic [ref=f1e159]:
+            - paragraph [ref=f1e162]:
+              - generic [ref=f1e163]: Do
+              - generic [ref=f1e164]: enim
+              - generic [ref=f1e165]: pariatur
+              - generic [ref=f1e166]: non
+              - generic [ref=f1e167]: adipiscing
+              - generic [ref=f1e168]: do
+              - generic [ref=f1e169]: consequat
+              - generic [ref=f1e170]: in
+              - generic [ref=f1e171]: voluptate
+              - generic [ref=f1e172]: adipiscing
+              - generic [ref=f1e173]: eiusmod
+              - generic [ref=f1e174]: magna
+              - generic [ref=f1e175]: pariatur
+              - generic [ref=f1e176]: non
+              - generic [ref=f1e177]: culpa
+              - generic [ref=f1e178]: officia
+              - generic [ref=f1e179]: consequat
+            - paragraph [ref=f1e186]: Occaecat
+            - paragraph [ref=f1e193]: EU/IN
+            - paragraph [ref=f1e200]: Consectetur
+            - paragraph [ref=f1e207]: Consequat
+            - paragraph [ref=f1e214]: Pariatur
+            - paragraph [ref=f1e221]: Mollit laborum
+        - generic [ref=f1e223]:
+          - generic [ref=f1e224]:
+            - heading [level=4] [ref=f1e228]:
+              - emphasis [ref=f1e229]: Non Officia, Consequat
+            - heading "Mollit est do magna" [level=2] [ref=f1e232]
+          - generic [ref=f1e233]:
+            - generic [ref=f1e240]:
+              - paragraph [ref=f1e243]:
+                - strong [ref=f1e244]: "1"
+              - generic [ref=f1e245]:
+                - heading "Voluptate" [level=3] [ref=f1e247]
+                - paragraph [ref=f1e249]: Cillum a amet sed eiusmod ut enim nostrud ut non sunt.
+            - generic [ref=f1e253]:
+              - paragraph [ref=f1e256]:
+                - strong [ref=f1e257]: "2"
+              - generic [ref=f1e258]:
+                - heading "Laborum" [level=3] [ref=f1e260]
+                - paragraph [ref=f1e262]: Cillum a amet sed eiusmod ut enim nostrud ut non sunt.
+            - generic [ref=f1e266]:
+              - paragraph [ref=f1e269]:
+                - strong [ref=f1e270]: "3"
+              - generic [ref=f1e271]:
+                - heading "Qui Anim Laborum" [level=3] [ref=f1e273]
+                - paragraph [ref=f1e275]: Cillum a amet sed eiusmod ut enim nostrud ut non sunt.
+          - generic [ref=f1e279]:
+            - generic [ref=f1e283]:
+              - generic [ref=f1e288]:
+                - paragraph [ref=f1e290]:
+                  - strong [ref=f1e291]: Tempor Nostrud
+                - paragraph [ref=f1e293]: Laborum Amet do Magna
+              - generic [ref=f1e294]:
+                - heading "Eiusmod enim Minim non a amet-eiusmod. Ut consequat adipiscing sed tempor non adipiscing do enim a lorem, consequat officia. Est laborum amet adipiscing, sed non officia deserunt est exercitation." [level=3] [ref=f1e296]:
+                  - generic [ref=f1e297]: Eiusmod
+                  - generic [ref=f1e298]: enim
+                  - generic [ref=f1e299]: Minim
+                  - generic [ref=f1e300]: non
+                  - generic [ref=f1e301]: a
+                  - generic [ref=f1e302]: amet-eiusmod.
+                  - generic [ref=f1e303]: Ut
+                  - generic [ref=f1e304]: consequat
+                  - generic [ref=f1e305]: adipiscing
+                  - generic [ref=f1e306]: sed
+                  - generic [ref=f1e307]: tempor
+                  - generic [ref=f1e308]: non
+                  - generic [ref=f1e309]: adipiscing
+                  - generic [ref=f1e310]: do
+                  - generic [ref=f1e311]: enim
+                  - generic [ref=f1e312]: a
+                  - generic [ref=f1e313]: lorem,
+                  - generic [ref=f1e314]: consequat
+                  - generic [ref=f1e315]: officia.
+                  - generic [ref=f1e316]: Est
+                  - generic [ref=f1e317]: laborum
+                  - generic [ref=f1e318]: amet
+                  - generic [ref=f1e319]: adipiscing,
+                  - generic [ref=f1e320]: sed
+                  - generic [ref=f1e321]: non
+                  - generic [ref=f1e322]: officia
+                  - generic [ref=f1e323]: deserunt
+                  - generic [ref=f1e324]: est
+                  - generic [ref=f1e325]: exercitation.
+                - heading [level=2] [ref=f1e327]:
+                  - strong [ref=f1e328]: "\""
+            - generic [ref=f1e333]:
+              - generic [ref=f1e338]:
+                - paragraph [ref=f1e340]:
+                  - strong [ref=f1e341]: Magna Aliqua
+                - paragraph [ref=f1e343]: Eiusmod ut Nostrud Cillum
+              - generic [ref=f1e344]:
+                - heading "Irure cillum officia id lorem. Sit tempor enim ad non sunt consequat non mollit consequat. In cillum eu officia anim est tempor ut, non qui deserunt pariatur non sunt adipiscing." [level=3] [ref=f1e346]:
+                  - generic [ref=f1e347]: Irure
+                  - generic [ref=f1e348]: cillum
+                  - generic [ref=f1e349]: officia
+                  - generic [ref=f1e350]: id
+                  - generic [ref=f1e351]: lorem.
+                  - generic [ref=f1e352]: Sit
+                  - generic [ref=f1e353]: tempor
+                  - generic [ref=f1e354]: enim
+                  - generic [ref=f1e355]: ad
+                  - generic [ref=f1e356]: non
+                  - generic [ref=f1e357]: sunt
+                  - generic [ref=f1e358]: consequat
+                  - generic [ref=f1e359]: non
+                  - generic [ref=f1e360]: mollit
+                  - generic [ref=f1e361]: consequat.
+                  - generic [ref=f1e362]: In
+                  - generic [ref=f1e363]: cillum
+                  - generic [ref=f1e364]: eu
+                  - generic [ref=f1e365]: officia
+                  - generic [ref=f1e366]: anim
+                  - generic [ref=f1e367]: est
+                  - generic [ref=f1e368]: tempor
+                  - generic [ref=f1e369]: ut,
+                  - generic [ref=f1e370]: non
+                  - generic [ref=f1e371]: qui
+                  - generic [ref=f1e372]: deserunt
+                  - generic [ref=f1e373]: pariatur
+                  - generic [ref=f1e374]: non
+                  - generic [ref=f1e375]: sunt
+                  - generic [ref=f1e376]: adipiscing.
+                - heading [level=2] [ref=f1e378]:
+                  - strong [ref=f1e379]: "\""
+        - generic [ref=f1e381]:
+          - generic [ref=f1e382]:
+            - heading [level=4] [ref=f1e386]:
+              - emphasis [ref=f1e387]: Non Proident
+            - heading "Aliqua Enim Nostrud" [level=2] [ref=f1e390]
+          - generic [ref=f1e391]:
+            - link [ref=f1e394] [cursor=pointer]:
+              - /url: https://hanzo.framer.website/work/strida
+              - generic [ref=f1e398]:
+                - heading "Veniam" [level=4] [ref=f1e400]
+                - generic [ref=f1e401]:
+                  - paragraph [ref=f1e405]: portfolio
+                  - paragraph [ref=f1e409]: sidebar
+            - link [ref=f1e412] [cursor=pointer]:
+              - /url: https://hanzo.framer.website/work/bravo
+              - generic [ref=f1e416]:
+                - heading "Irure" [level=4] [ref=f1e418]
+                - generic [ref=f1e419]:
+                  - paragraph [ref=f1e423]: UI/UX
+                  - paragraph [ref=f1e427]: App
+            - link [ref=f1e430] [cursor=pointer]:
+              - /url: https://hanzo.framer.website/work/nitro
+              - generic [ref=f1e434]:
+                - heading "Velit" [level=4] [ref=f1e436]
+                - generic [ref=f1e437]:
+                  - paragraph [ref=f1e441]: Design System
+                  - paragraph [ref=f1e445]: Web
+            - link [ref=f1e448] [cursor=pointer]:
+              - /url: https://hanzo.framer.website/work/fargo
+              - generic [ref=f1e452]:
+                - heading "Dolor" [level=4] [ref=f1e454]
+                - generic [ref=f1e455]:
+                  - paragraph [ref=f1e459]: SaaS
+                  - paragraph [ref=f1e463]: Web
+        - generic [ref=f1e465]:
+          - generic [ref=f1e466]:
+            - heading [level=4] [ref=f1e470]:
+              - emphasis [ref=f1e471]: Non Proident
+            - heading "Officia adipiscing magna 2011" [level=2] [ref=f1e474]
+          - generic [ref=f1e475]:
+            - generic [ref=f1e480]:
+              - paragraph [ref=f1e482]:
+                - strong [ref=f1e483]: Irure non Sunt
+              - generic [ref=f1e484]:
+                - generic [ref=f1e485]:
+                  - link [ref=f1e487] [cursor=pointer]:
+                    - /url: https://www.instagram.com/stfnco/
+                  - link [ref=f1e492] [cursor=pointer]:
+                    - /url: https://www.linkedin.com/in/nickstepuk/
+                  - link [ref=f1e497] [cursor=pointer]:
+                    - /url: https://x.com/stfnco
+                - paragraph [ref=f1e502]: Hanzo Cillum, Officia
+            - generic [ref=f1e503]:
+              - heading "Lorem sit Amet do a Lorem pariatur culpa qui est adipiscing, incididunt nostrud nisi. Ut irure pariatur non officia mollit lorem adipiscing sed tempor pariatur. Culpa id Laborum, do tempor pariatur sint officia — est lorem tempor non sunt anim laborum do consequat adipiscing sed." [level=4] [ref=f1e506]
+              - generic [ref=f1e508]:
+                - generic [ref=f1e511]:
+                  - paragraph [ref=f1e513]: Cupidatat Proident
+                  - paragraph [ref=f1e515]: Hanzo Co.
+                  - paragraph [ref=f1e517]: 2011 → Now
+                - generic [ref=f1e520]:
+                  - paragraph [ref=f1e522]: Mollit Anim
+                  - paragraph [ref=f1e524]: Tempor
+                  - paragraph [ref=f1e526]: 2024 → Now
+                - generic [ref=f1e529]:
+                  - paragraph [ref=f1e531]: Tempor Pariatur
+                  - paragraph [ref=f1e533]: Aliqua
+                  - paragraph [ref=f1e535]: 2019 → 2024
+                - generic [ref=f1e538]:
+                  - paragraph [ref=f1e540]: Eiusmod Pariatur
+                  - paragraph [ref=f1e542]: Anim
+                  - paragraph [ref=f1e544]: 2016 → 2019
+        - generic [ref=f1e547]:
+          - generic [ref=f1e548]:
+            - heading [level=4] [ref=f1e552]:
+              - emphasis [ref=f1e553]: Officia
+            - heading "Irure Dolor, Esse Cillum" [level=2] [ref=f1e557]
+          - generic [ref=f1e561]:
+            - generic [ref=f1e562]:
+              - generic [ref=f1e563]:
+                - generic [ref=f1e565] [cursor=pointer]:
+                  - heading "Monthly" [level=3] [ref=f1e567]
+                  - heading "Custom" [level=3] [ref=f1e571]
+                - generic [ref=f1e572]:
+                  - paragraph [ref=f1e574]:
+                    - strong [ref=f1e575]: $7,500
+                  - paragraph [ref=f1e577]: /mo
+              - generic [ref=f1e578]:
+                - paragraph [ref=f1e582]: Laborum Amet — elit 2 Magna Enim
+                - link [ref=f1e585] [cursor=pointer]:
+                  - /url: https://stfn.lemonsqueezy.com/buy/6a3875eb-f614-4485-a256-49d0247956e4
+                  - paragraph [ref=f1e587]:
+                    - strong [ref=f1e588]: Sint Sunt Consequat Duis
+            - generic [ref=f1e592]:
+              - generic [ref=f1e593]:
+                - heading [level=3] [ref=f1e595]:
+                  - strong [ref=f1e596]: Mollit pariatur
+                - generic [ref=f1e597]:
+                  - paragraph [ref=f1e603]:
+                    - generic [ref=f1e604]:
+                      - generic [ref=f1e605]: C
+                      - generic [ref=f1e606]: o
+                      - generic [ref=f1e607]: "n"
+                      - generic [ref=f1e608]: s
+                      - generic [ref=f1e609]: e
+                      - generic [ref=f1e610]: q
+                      - generic [ref=f1e611]: u
+                      - generic [ref=f1e612]: a
+                      - generic [ref=f1e613]: t
+                    - generic [ref=f1e614]:
+                      - generic [ref=f1e615]: c
+                      - generic [ref=f1e616]: i
+                      - generic [ref=f1e617]: l
+                      - generic [ref=f1e618]: l
+                      - generic [ref=f1e619]: u
+                      - generic [ref=f1e620]: m
+                    - generic [ref=f1e621]:
+                      - generic [ref=f1e622]: p
+                      - generic [ref=f1e623]: a
+                      - generic [ref=f1e624]: r
+                      - generic [ref=f1e625]: i
+                      - generic [ref=f1e626]: a
+                      - generic [ref=f1e627]: t
+                      - generic [ref=f1e628]: u
+                      - generic [ref=f1e629]: r
+                  - paragraph [ref=f1e636]:
+                    - generic [ref=f1e637]:
+                      - generic [ref=f1e638]: A
+                      - generic [ref=f1e639]: m
+                      - generic [ref=f1e640]: e
+                      - generic [ref=f1e641]: t
+                    - generic [ref=f1e642]:
+                      - generic [ref=f1e643]: a
+                      - generic [ref=f1e644]: d
+                      - generic [ref=f1e645]: i
+                      - generic [ref=f1e646]: p
+                      - generic [ref=f1e647]: i
+                      - generic [ref=f1e648]: s
+                      - generic [ref=f1e649]: c
+                      - generic [ref=f1e650]: i
+                      - generic [ref=f1e651]: "n"
+                      - generic [ref=f1e652]: g
+                  - paragraph [ref=f1e658]:
+                    - generic [ref=f1e659]:
+                      - generic [ref=f1e660]: V
+                      - generic [ref=f1e661]: e
+                      - generic [ref=f1e662]: l
+                      - generic [ref=f1e663]: i
+                      - generic [ref=f1e664]: t
+                    - generic [ref=f1e665]:
+                      - generic [ref=f1e666]: o
+                      - generic [ref=f1e667]: f
+                      - generic [ref=f1e668]: f
+                      - generic [ref=f1e669]: i
+                      - generic [ref=f1e670]: c
+                      - generic [ref=f1e671]: i
+                      - generic [ref=f1e672]: a
+                    - generic [ref=f1e673]:
+                      - generic [ref=f1e674]: a
+                      - generic [ref=f1e675]: "n"
+                      - generic [ref=f1e676]: i
+                      - generic [ref=f1e677]: m
+                  - paragraph [ref=f1e683]:
+                    - generic [ref=f1e684]:
+                      - generic [ref=f1e685]: C
+                      - generic [ref=f1e686]: u
+                      - generic [ref=f1e687]: l
+                      - generic [ref=f1e688]: p
+                      - generic [ref=f1e689]: a
+                    - generic [ref=f1e690]:
+                      - generic [ref=f1e691]: r
+                      - generic [ref=f1e692]: e
+                      - generic [ref=f1e693]: p
+                      - generic [ref=f1e694]: r
+                      - generic [ref=f1e695]: e
+                      - generic [ref=f1e696]: h
+                      - generic [ref=f1e697]: e
+                      - generic [ref=f1e698]: "n"
+                      - generic [ref=f1e699]: d
+                      - generic [ref=f1e700]: e
+                      - generic [ref=f1e701]: r
+                      - generic [ref=f1e702]: i
+                      - generic [ref=f1e703]: t
+                  - paragraph [ref=f1e709]:
+                    - generic [ref=f1e710]:
+                      - generic [ref=f1e711]: P
+                      - generic [ref=f1e712]: a
+                      - generic [ref=f1e713]: r
+                      - generic [ref=f1e714]: i
+                      - generic [ref=f1e715]: a
+                      - generic [ref=f1e716]: t
+                      - generic [ref=f1e717]: u
+                      - generic [ref=f1e718]: r
+                    - generic [ref=f1e719]:
+                      - generic [ref=f1e720]: c
+                      - generic [ref=f1e721]: u
+                      - generic [ref=f1e722]: l
+                      - generic [ref=f1e723]: p
+                      - generic [ref=f1e724]: a
+                  - paragraph [ref=f1e730]:
+                    - generic [ref=f1e731]:
+                      - generic [ref=f1e732]: L
+                      - generic [ref=f1e733]: o
+                      - generic [ref=f1e734]: r
+                      - generic [ref=f1e735]: e
+                      - generic [ref=f1e736]: m
+                    - generic [ref=f1e737]:
+                      - generic [ref=f1e738]: e
+                      - generic [ref=f1e739]: i
+                      - generic [ref=f1e740]: u
+                      - generic [ref=f1e741]: s
+                      - generic [ref=f1e742]: m
+                      - generic [ref=f1e743]: o
+                      - generic [ref=f1e744]: d
+              - generic [ref=f1e747]:
+                - generic [ref=f1e752]:
+                  - paragraph [ref=f1e754]:
+                    - strong [ref=f1e755]: Mollit Tempor
+                  - paragraph [ref=f1e757]: Pariatur Occaecat in Mollit Anim
+                - generic [ref=f1e758]:
+                  - heading "Pariatur adipiscing tempor pariatur consectetur sed magna. Non adipiscing sed eiusmod non officia id est pariatur sint in culpa qui id a eiusmod tempor. Non consequat consectetur eiusmod non adipiscing." [level=4] [ref=f1e760]:
+                    - generic [ref=f1e761]: Pariatur
+                    - generic [ref=f1e762]: adipiscing
+                    - generic [ref=f1e763]: tempor
+                    - generic [ref=f1e764]: pariatur
+                    - generic [ref=f1e765]: consectetur
+                    - generic [ref=f1e766]: sed
+                    - generic [ref=f1e767]: magna.
+                    - generic [ref=f1e768]: Non
+                    - generic [ref=f1e769]: adipiscing
+                    - generic [ref=f1e770]: sed
+                    - generic [ref=f1e771]: eiusmod
+                    - generic [ref=f1e772]: non
+                    - generic [ref=f1e773]: officia
+                    - generic [ref=f1e774]: id
+                    - generic [ref=f1e775]: est
+                    - generic [ref=f1e776]: pariatur
+                    - generic [ref=f1e777]: sint
+                    - generic [ref=f1e778]: in
+                    - generic [ref=f1e779]: culpa
+                    - generic [ref=f1e780]: qui
+                    - generic [ref=f1e781]: id
+                    - generic [ref=f1e782]: a
+                    - generic [ref=f1e783]: eiusmod
+                    - generic [ref=f1e784]: tempor.
+                    - generic [ref=f1e785]: Non
+                    - generic [ref=f1e786]: consequat
+                    - generic [ref=f1e787]: consectetur
+                    - generic [ref=f1e788]: eiusmod
+                    - generic [ref=f1e789]: non
+                    - generic [ref=f1e790]: adipiscing.
+                  - heading [level=4] [ref=f1e792]:
+                    - strong [ref=f1e793]: "\""
+          - generic [ref=f1e795]:
+            - paragraph [ref=f1e801]: Cillum-nulla officia
+            - paragraph [ref=f1e808]: Laborum pariatur
+            - paragraph [ref=f1e815]: Excepteur-occaecat
+            - paragraph [ref=f1e822]: Irure officia
+            - paragraph [ref=f1e829]: Ut-minim, irure esse
+            - paragraph [ref=f1e836]: Occaecat officia
+            - paragraph [ref=f1e843]: Amet consequat
+            - paragraph [ref=f1e850]: Adipiscing pariatur
+            - paragraph [ref=f1e857]: Mollit laborum
+        - generic [ref=f1e860]:
+          - generic [ref=f1e861]:
+            - heading [level=4] [ref=f1e865]:
+              - emphasis [ref=f1e866]: EST
+            - heading "Sint Cupidatat, Proident" [level=2] [ref=f1e869]
+          - generic [ref=f1e870]:
+            - generic [ref=f1e871]:
+              - heading "Anim amet consequat? Duis a amet consequat duis" [level=3] [ref=f1e876]
+              - generic [ref=f1e877]:
+                - link [ref=f1e881] [cursor=pointer]:
+                  - /url: https://stfn.lemonsqueezy.com/buy/6a3875eb-f614-4485-a256-49d0247956e4
+                  - paragraph [ref=f1e883]:
+                    - strong [ref=f1e884]: Anim a Consequat Duis
+                - paragraph [ref=f1e889]:
+                  - text: In, velit eu in
+                  - link "joris@hanzo.com" [ref=f1e890] [cursor=pointer]:
+                    - /url: mailto:joris@hanzo.com
+            - generic [ref=f1e893]:
+              - generic [ref=f1e895] [cursor=pointer]:
+                - heading "Cillum non adipiscing eiusmod a exercitation non a tempor nostrud?" [level=3] [ref=f1e899]
+                - paragraph [ref=f1e904]: Non exercitation ut aliquip non proident — culpa qui adipiscing tempor magna. Aliqua pariatur non qui-anim, lorem-ipsum consectetur sed tempor magna enim a eiusmod ut nostrud cillum.
+              - generic [ref=f1e906] [cursor=pointer]:
+                - heading "Non sunt in qui adipiscing?" [level=3] [ref=f1e910]
+                - paragraph [ref=f1e915]: Anim pariatur non consequat cillum 1–2 pariatur sint. Mollit lorem sit amet tempor, non mollit tempor ut enim ad non sunt.
+              - generic [ref=f1e917] [cursor=pointer]:
+                - heading "Non sunt deserunt est A amet?" [level=3] [ref=f1e921]
+                - paragraph [ref=f1e926]: Et enim ad non sunt — anim a exercitation, non qui lorem consequat pariatur, non officia id laborum sit do a amet do pariatur culpa.
+              - generic [ref=f1e928] [cursor=pointer]:
+                - heading "Aute irure in cillum eu non mollit?" [level=3] [ref=f1e932]
+                - paragraph [ref=f1e937]: Deserunt, laborum DO, eiusmod magna, minim veniam, irure, cillum nulla officia — deserunt laborum amet magna ut enim non sunt culpa.
+              - generic [ref=f1e939] [cursor=pointer]:
+                - heading "Duis irure in non qui?" [level=3] [ref=f1e943]
+                - paragraph [ref=f1e948]: Culpa qui mollit, Tempor non sunt adipiscing, sed Magna ut minim non culpa reprehenderit.
+              - generic [ref=f1e950] [cursor=pointer]:
+                - heading "Est A lorem sit exercitation?" [level=3] [ref=f1e954]
+                - paragraph [ref=f1e959]: Non — qui est lorem eiusmod non mollit anim tempor magna. Aliqua enim quis nisi.
+              - generic [ref=f1e961] [cursor=pointer]:
+                - heading "Ut non culpa consectetur sed?" [level=3] [ref=f1e965]
+                - paragraph [ref=f1e970]: Nulla officia id tempor enim, non qui exercitation non qui-lorem. Do non sunt consequat officia id-amet do Eiusmod/Tempor incididunt ut labore.
+      - generic [ref=f1e979]:
+        - generic [ref=f1e980]:
+          - heading [level=4] [ref=f1e984]:
+            - emphasis [ref=f1e985]: 2 lorem consequat
+          - generic [ref=f1e987]:
+            - heading "Lorem Ipsum" [level=1] [ref=f1e989]
+            - heading "Anim amet do eiusmod ut et dolore non consequat. Non consequat non qui deserunt id amet sed pariatur." [level=4] [ref=f1e991]
+          - link [ref=f1e994] [cursor=pointer]:
+            - /url: https://hello@stfn.co/
+            - paragraph [ref=f1e996]:
+              - strong [ref=f1e997]: Sunt a amet magna enim
+        - generic [ref=f1e1001]:
+          - paragraph [ref=f1e1004]: © Hanzo Studio, 2025
+          - generic [ref=f1e1005]:
+            - link [ref=f1e1007] [cursor=pointer]:
+              - /url: https://hello@stfn.co/
+            - link [ref=f1e1012] [cursor=pointer]:
+              - /url: https://x.com/stfnco
+            - link [ref=f1e1017] [cursor=pointer]:
+              - /url: https://linkedin.com/
+            - link [ref=f1e1022] [cursor=pointer]:
+              - /url: https://instagram.com/stfnco
