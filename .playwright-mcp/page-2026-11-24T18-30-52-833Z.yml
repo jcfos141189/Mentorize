@@ -1,0 +1,243 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Mentorize Mentorize" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Mentorize" [ref=e5]
+        - generic [ref=e6]: Mentorize
+      - generic [ref=e7]:
+        - button "Pesquisar" [ref=e8] [cursor=pointer]
+        - button "Escolha uma Página" [ref=e12] [cursor=pointer]
+  - main [ref=e15]:
+    - generic [ref=e16]:
+      - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e18]
+      - generic [ref=e21]:
+        - generic [ref=e22]:
+          - img "Mentorize" [ref=e23]
+          - generic [ref=e24]: Mentorize-se
+        - heading "Encontre o próximo passo da sua carreira" [level=1] [ref=e25]:
+          - generic [ref=e26]: Encontre
+          - generic [ref=e27]: o
+          - generic [ref=e28]: próximo
+          - generic [ref=e29]: passo
+          - generic [ref=e30]: da
+          - generic [ref=e31]: sua
+          - generic [ref=e32]: carreira
+        - paragraph [ref=e33]: Converse com profissionais que já percorreram caminhos parecidos com o seu e transforme reflexão em ação.
+        - generic [ref=e34]:
+          - link "Encontrar um mentor" [ref=e35] [cursor=pointer]:
+            - /url: "#mentorado"
+          - link "Quero ser mentor" [ref=e42] [cursor=pointer]:
+            - /url: "#mentor"
+        - paragraph [ref=e49]: Videoconferência · sessões de até 1h30 · valor definido por cada mentor
+    - generic [ref=e53]:
+      - generic [ref=e54]: Mentorize em números
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: "[000]"
+          - generic [ref=e62]: sessões realizadas
+        - generic [ref=e63]:
+          - generic [ref=e64]: "[000]"
+          - generic [ref=e65]: mentores ativos
+        - generic [ref=e66]:
+          - generic [ref=e67]: "[0,0]"
+          - generic [ref=e68]: avaliação média das mentorias
+        - generic [ref=e69]:
+          - generic [ref=e70]: "[00]"
+          - generic [ref=e71]: áreas de atuação
+    - generic [ref=e73]:
+      - generic [ref=e74]: Sobre
+      - heading "Mentorize é uma plataforma de mentoria on-line." [level=2] [ref=e80]
+      - generic [ref=e81]:
+        - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e85]
+        - generic [ref=e87]:
+          - paragraph [ref=e88]: Existimos para contribuir com o desenvolvimento de pessoas e carreiras a partir de um ambiente colaborativo, que permite o compartilhamento de conhecimento e experiências entre profissionais.
+          - paragraph [ref=e90]: É o lugar de quem acredita que um propósito transforma realidades. Um convite ao autoconhecimento e ao networking.
+          - paragraph [ref=e91]:
+            - text: "Faça parte desta experiência incrível:"
+            - strong [ref=e92]: mentorize-se!
+          - link "Cadastre-se Agora!" [ref=e94] [cursor=pointer]:
+            - /url: /cadastro
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - heading "O Mentor" [level=2] [ref=e108]
+        - paragraph [ref=e110]: Por meio de seu conhecimento e sua experiência profissional, você vai contribuir com o desenvolvimento de outra pessoa, encorajando-a a definir metas e a traçar estratégias que serão capazes de potencializar suas habilidades.
+        - generic [ref=e111]:
+          - paragraph [ref=e112]:
+            - strong [ref=e113]: Por que você deve ser mentor?
+          - paragraph [ref=e114]: Porque você pode transformar uma carreira através da Mentoria On-line!
+        - link "OK, Quero ser Mentor!" [ref=e116] [cursor=pointer]:
+          - /url: /cadastro/mentor
+      - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e125]
+    - generic [ref=e129]:
+      - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e132]
+      - generic [ref=e133]:
+        - heading "O Mentorado" [level=2] [ref=e136]
+        - paragraph [ref=e138]: É quem busca inspiração para conquistar uma carreira ainda mais promissora. É quem se compromete e se dedica aos objetivos estabelecidos para maximizar habilidades, com a colaboração do conhecimento e da experiência profissional de um mentor.
+        - generic [ref=e139]:
+          - paragraph [ref=e140]:
+            - strong [ref=e141]: Por que você deve ser mentorado?
+          - paragraph [ref=e142]: Porque você tem alguém ao seu lado para vencer desafios!
+        - link "OK, Quero ser Mentorado!" [ref=e144] [cursor=pointer]:
+          - /url: /cadastro/mentorado
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]: Etapas da Plataforma
+        - heading "O Processo" [level=2] [ref=e158]
+        - generic [ref=e159]:
+          - link "3 Passos (03)" [ref=e160] [cursor=pointer]:
+            - /url: "#cadastro"
+            - generic [ref=e161]: 3 Passos
+            - superscript: (03)
+          - button "Voltar etapa" [ref=e162] [cursor=pointer]
+          - button "Avançar etapa" [ref=e165] [cursor=pointer]
+      - region "Carrossel de etapas do processo" [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - generic [ref=e172] [cursor=pointer]:
+              - generic [ref=e173]: 01 · PERFIL
+              - generic [ref=e182]:
+                - generic [ref=e183]:
+                  - generic [ref=e184]: objetivo_carreira.set
+                  - generic [ref=e185]: 5 áreas
+                - generic [ref=e186]:
+                  - generic [ref=e187]: Tecnologia
+                  - generic [ref=e188]: Liderança
+                  - generic [ref=e189]: Carreira
+                  - generic [ref=e190]: Negócios
+                  - generic [ref=e191]: Inovação
+                - generic [ref=e192]:
+                  - generic [ref=e193]: Dias e horários definidos
+                  - generic [ref=e200]: 19:00 — 21:00
+              - generic [ref=e201]:
+                - heading "Crie seu perfil" [level=3] [ref=e202]
+                - paragraph [ref=e203]: Conte seu objetivo, escolha até 5 áreas de interesse e informe os dias e horários em que pode conversar.
+            - generic [ref=e204]:
+              - generic [ref=e205]: Passo 1 — Crie seu Perfil
+              - generic [ref=e206]: →
+          - generic [ref=e207]:
+            - generic [ref=e209] [cursor=pointer]:
+              - generic [ref=e210]: 02 · ESCOLHA
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - generic [ref=e219]:
+                    - generic [ref=e220]: M
+                    - generic [ref=e221]:
+                      - generic [ref=e222]: Mentor Recomendado
+                      - generic [ref=e223]: Liderança & Gestão
+                  - generic [ref=e224]: 98% MATCH
+                - generic [ref=e225]: "\"10+ anos de experiência acelerando líderes e carreiras de alta performance.\""
+                - generic [ref=e226]:
+                  - generic [ref=e227]: Resposta em até 3 dias úteis
+                  - generic [ref=e231]: Enviar Convite →
+              - generic [ref=e232]:
+                - heading "Escolha um mentor" [level=3] [ref=e233]
+                - paragraph [ref=e234]: Busque por área ou objetivo, leia o minicurrículo e envie o convite. O mentor tem até 3 dias úteis para responder.
+            - generic [ref=e235]:
+              - generic [ref=e236]: Passo 2 — Escolha um Mentor
+              - generic [ref=e237]: →
+          - generic [ref=e238]:
+            - generic [ref=e240] [cursor=pointer]:
+              - generic [ref=e241]: 03 · CONVERSA
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - generic [ref=e250]: SALA AO VIVO
+                  - generic [ref=e253]: 45:00
+                - generic [ref=e254]:
+                  - generic [ref=e255]: Mentor
+                  - generic [ref=e256]: Você
+                - generic [ref=e257]: Videoconferência no ritmo combinado
+              - generic [ref=e264]:
+                - heading "Comece a conversar" [level=3] [ref=e265]
+                - paragraph [ref=e266]: Com o convite aceito, os encontros acontecem por videoconferência, no ritmo que vocês combinarem.
+            - generic [ref=e267]:
+              - generic [ref=e268]: Passo 3 — Comece a Conversar
+              - generic [ref=e269]: →
+    - generic [ref=e271]:
+      - generic [ref=e272]:
+        - generic [ref=e273]: FAQ
+        - heading "Perguntas frequentes" [level=2] [ref=e277]
+      - generic [ref=e278]:
+        - generic [ref=e279]:
+          - generic [ref=e280]:
+            - button [expanded] [ref=e281] [cursor=pointer]:
+              - heading "O que é mentoria?" [level=5] [ref=e282]
+            - paragraph [ref=e287]: É uma orientação onde um profissional mais experiente compartilha seu conhecimento e suas experiências com profissionais mais jovens no mercado. Ou seja, é um processo de aconselhamento para o desenvolvimento de carreiras.
+          - generic [ref=e288]:
+            - button [ref=e289] [cursor=pointer]:
+              - heading "Como acontecerá a mentoria?" [level=5] [ref=e290]
+            - paragraph [ref=e294]: Todos os encontros de mentoria acontecerão por meio de uma plataforma de videoconferência. Nos dias e horários agendados mentor e mentorado receberão uma notificação, via e-mail, para que acessem suas páginas pessoais e iniciem a mentoria.
+          - generic [ref=e295]:
+            - button [ref=e296] [cursor=pointer]:
+              - heading "Qual é o tempo de cada mentoria?" [level=5] [ref=e297]
+            - generic:
+              - paragraph [ref=e301]: "As sessões de mentoria terão, no máximo, 1h30. Além disso, mentor e mentorado decidirão, em comum acordo, se elas acontecerão:"
+              - list [ref=e302]:
+                - listitem [ref=e303]: Semanalmente;
+                - listitem [ref=e304]: Quinzenalmente;
+                - listitem [ref=e305]: Mensalmente.
+          - generic [ref=e306]:
+            - button [ref=e307] [cursor=pointer]:
+              - heading "A mentoria acontece em quantos encontros?" [level=5] [ref=e308]
+            - paragraph [ref=e312]: A quantidade de encontros irá depender de uma avaliação prévia, feita pelo(a) mentor(a), do resultado que o(a) mentorado(a) deseja conquistar. Somente após essa análise o número de encontros é definido.
+        - generic [ref=e313]:
+          - generic [ref=e314]:
+            - button [ref=e315] [cursor=pointer]:
+              - heading "Quem é o público-alvo do Mentorize?" [level=5] [ref=e316]
+            - paragraph [ref=e320]: Pessoas que desejam se desenvolver profissionalmente, independentemente de sua área de formação ou de atuação no mercado.
+          - generic [ref=e321]:
+            - button [ref=e322] [cursor=pointer]:
+              - heading "Quem pode ser mentor?" [level=5] [ref=e323]
+            - generic:
+              - paragraph [ref=e327]: "Profissional que tenha conhecimento e experiência em sua área de atuação, podendo ser:"
+              - list [ref=e328]:
+                - listitem [ref=e329]: Especialista;
+                - listitem [ref=e330]: Consultor;
+                - listitem [ref=e331]: Coordenador;
+                - listitem [ref=e332]: Gerente;
+                - listitem [ref=e333]: Superintendente;
+                - listitem [ref=e334]: Diretor;
+                - listitem [ref=e335]: CEO.
+              - paragraph [ref=e336]: O mais importante é contribuir com a transformação na carreira do(a) mentorado(a)!
+          - generic [ref=e337]:
+            - button [ref=e338] [cursor=pointer]:
+              - heading "Quem pode ser mentorado?" [level=5] [ref=e339]
+            - paragraph [ref=e343]: Profissionais que desejam dar um novo rumo às suas carreiras, estando dispostos a aprender e a colocar em prática as ações propostas pelo(a) mentor(a).
+          - generic [ref=e344]:
+            - button [ref=e345] [cursor=pointer]:
+              - heading "As mentorias são pagas?" [level=5] [ref=e346]
+            - paragraph [ref=e350]: Sim. Todas as mentorias são pagas e os valores das sessões variam de acordo com o conhecimento e com a experiência de cada mentor(a).
+      - link "Cadastre-se Agora!" [ref=e352] [cursor=pointer]:
+        - /url: /cadastro
+  - contentinfo [ref=e359]:
+    - generic [ref=e361]:
+      - generic [ref=e362]:
+        - img "Mentorize - Sua Plataforma de Mentoria On-line" [ref=e364]
+        - generic [ref=e365]: Mentorize-se
+        - heading "Pronto para dar o seu próximo passo?" [level=2] [ref=e369]
+        - paragraph [ref=e370]: Faça parte da plataforma de mentoria on-line e conecte-se com profissionais experientes para acelerar o seu desenvolvimento.
+        - generic [ref=e371]:
+          - link "Encontrar um mentor" [ref=e372] [cursor=pointer]:
+            - /url: "#mentorado"
+          - link "Quero ser mentor" [ref=e379] [cursor=pointer]:
+            - /url: "#mentor"
+      - generic [ref=e386]:
+        - generic [ref=e387]: © 2026 - Mentorize - Todos os Direitos Reservados
+        - generic [ref=e389]:
+          - generic [ref=e390]: "Fale conosco:"
+          - link "contato@mentorize.com.br" [ref=e391] [cursor=pointer]:
+            - /url: mailto:contato@mentorize.com.br
+        - generic [ref=e392]:
+          - link "E-mail Mentorize" [ref=e393] [cursor=pointer]:
+            - /url: mailto:contato@mentorize.com.br
+          - link "X (Twitter)" [ref=e399] [cursor=pointer]:
+            - /url: https://x.com/
+          - link "LinkedIn" [ref=e405] [cursor=pointer]:
+            - /url: https://linkedin.com/
+          - link "Instagram" [ref=e411] [cursor=pointer]:
+            - /url: https://instagram.com/
+  - generic [ref=e419]:
+    - button "Menu" [ref=e420]
+    - button "Inspect" [ref=e426]
+    - button "Audit" [ref=e430]
+    - button "Settings" [ref=e435]

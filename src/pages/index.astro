@@ -883,7 +883,9 @@
       -ms-overflow-style: none;
       cursor: grab;
       user-select: none;
-      padding: 30px 0 55px 0;
+      padding: 24px 0 55px 0;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
     .croma-gallery-viewport::-webkit-scrollbar {
       display: none;
@@ -895,15 +897,23 @@
 
     .croma-gallery-track {
       display: flex;
-      gap: 2.75rem;
+      gap: 1.5rem;
       width: max-content;
       margin: 0 auto;
-      padding: 0 max(2rem, calc((100vw - 1300px) / 2 + 2rem));
-      align-items: center;
+      padding: 0 1.25rem;
+      align-items: stretch;
+    }
+
+    @media (min-width: 640px) {
+      .croma-gallery-track {
+        gap: 2.75rem;
+        padding: 0 max(2rem, calc((100vw - 1300px) / 2 + 2rem));
+      }
     }
 
     .croma-card-item {
-      flex: 0 0 clamp(300px, 24vw, 370px);
+      flex: 0 0 min(310px, 80vw);
+      scroll-snap-align: center;
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -913,16 +923,30 @@
       color: inherit;
     }
 
+    @media (min-width: 1024px) {
+      .croma-card-item {
+        flex: 0 0 clamp(320px, 24vw, 370px);
+      }
+    }
+
     .croma-card-canvas {
       position: relative;
       width: 100%;
-      aspect-ratio: 1 / 1;
+      height: 100%;
+      min-height: 410px;
       border-radius: 22px;
       overflow: hidden;
       box-shadow: 0 20px 45px -10px rgba(36, 87, 106, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.7);
-      transform: rotate(var(--rot, 0deg));
+      transform: rotate(calc(var(--rot, 0deg) * 0.5));
       transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
       cursor: pointer;
+    }
+
+    @media (min-width: 640px) {
+      .croma-card-canvas {
+        min-height: 440px;
+        transform: rotate(var(--rot, 0deg));
+      }
     }
 
     .croma-card-item:hover .croma-card-canvas {
@@ -931,13 +955,24 @@
     }
 
     .croma-card-inner {
-      position: absolute;
-      inset: 0;
-      padding: 1.85rem;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 410px;
+      padding: 1.4rem 1.25rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 0.75rem;
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (min-width: 640px) {
+      .croma-card-inner {
+        min-height: 440px;
+        padding: 1.85rem;
+        gap: 1rem;
+      }
     }
 
     .croma-card-item:hover .croma-card-inner {
@@ -1479,9 +1514,9 @@
                 </div>
 
                 <!-- Bottom Text: Step Number + Exact Copy Imagem 2 -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Crie seu perfil</h3>
-                  <p class="text-sm text-white/90 leading-relaxed font-normal">
+                <div class="pt-1">
+                  <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white mb-1">Crie seu perfil</h3>
+                  <p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
                     Conte seu objetivo, escolha até 5 áreas de interesse e informe os dias e horários em que pode conversar.
                   </p>
                 </div>
@@ -1545,9 +1580,9 @@
                 </div>
 
                 <!-- Bottom Text: Step Number + Exact Copy Imagem 3 -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Escolha um mentor</h3>
-                  <p class="text-sm text-white/90 leading-relaxed font-normal">
+                <div class="pt-1">
+                  <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white mb-1">Escolha um mentor</h3>
+                  <p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
                     Busque por área ou objetivo, leia o minicurrículo e envie o convite. O mentor tem até 3 dias úteis para responder.
                   </p>
                 </div>
@@ -1604,9 +1639,9 @@
                 </div>
 
                 <!-- Bottom Text: Step Number + Exact Copy Imagem 4 -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Comece a conversar</h3>
-                  <p class="text-sm text-white/90 leading-relaxed font-normal">
+                <div class="pt-1">
+                  <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white mb-1">Comece a conversar</h3>
+                  <p class="text-xs sm:text-sm text-white/90 leading-relaxed font-normal">
                     Com o convite aceito, os encontros acontecem por videoconferência, no ritmo que vocês combinarem.
                   </p>
                 </div>
