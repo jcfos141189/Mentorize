@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinguaPro — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Reused Tailwind Play CDN from copied project -->
+  <script src="assets/overview/assets/cdn.tailwindcss.com/3.4.17.js"></script>
+  <!-- Reused Lucide Icons from copied project -->
+  <script src="assets/overview/assets/unpkg.com/lucide@1.73.0/dist/umd/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              DEFAULT: '#0B3D91',
+              50: '#F0F4FA',
+              100: '#E1E8F5',
+              800: '#082A66',
+              900: '#051D47',
+            },
+            coral: {
+              DEFAULT: '#E94E4E',
+              hover: '#D63D3D'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: #F8FAFC;
+      color: #334155;
+    }
+    .catalog-shell {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+    }
+    .catalog-navbar {
+      flex-shrink: 0;
+      height: 5rem;
+    }
+    .catalog-viewport {
+      flex: 1 1 0%;
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 5rem);
+      overflow: hidden;
+    }
+    .catalog-viewport iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    .specimen-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+    .specimen-header {
+      padding: 0.875rem 1.25rem;
+      border-bottom: 1px solid #F1F5F9;
+      background: #F8FAFC;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .specimen-body {
+      padding: 1.5rem;
+    }
+    .specimen-code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.75rem;
+      color: #64748B;
+      background: #F1F5F9;
+      padding: 0.25rem 0.5rem;
+      border-radius: 0.375rem;
+    }
+    /* Custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #CBD5E1;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94A3B8;
+    }
+  </style>
+</head>
+<body>
+  <div class="catalog-shell">
+    <!-- Navbar identical to source, with Overview | Components routing -->
+    <header class="catalog-navbar bg-white/90 w-full border-slate-100 border-b backdrop-blur-md z-50 sticky top-0" id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div class="flex justify-between items-center h-full">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="location.hash='#overview'">
+            <div class="w-10 h-10 bg-navy rounded-lg flex items-center justify-center mr-3 text-white">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="languages" class="lucide lucide-languages w-6 h-6"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl font-semibold tracking-tight text-navy-900">LinguaPro</span>
+              <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 bg-navy-50 text-navy-800 rounded border border-navy-100">Design System</span>
+            </div>
+          </div>
+
+          <!-- Catalog Navigation: Overview | Components -->
+          <nav class="flex items-center space-x-2">
+            <a href="#overview" id="tab-overview" class="px-4 py-2 text-sm font-semibold rounded-lg transition-all text-slate-600 hover:text-navy hover:bg-slate-50">
+              Overview
+            </a>
+            <a href="#components" id="tab-components" class="px-4 py-2 text-sm font-semibold rounded-lg transition-all bg-navy text-white shadow-sm">
+              Components
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Viewport Container -->
+    <main class="catalog-viewport">
+      <!-- Overview View (Iframe) -->
+      <iframe id="view-overview" src="assets/overview/index.html" class="hidden w-full h-full border-0" title="LinguaPro Overview"></iframe>
+
+      <!-- Components View (Source-backed catalog) -->
+      <div id="view-components" class="flex w-full h-full overflow-hidden bg-slate-50">
+        <!-- Sticky Left Sidebar -->
+        <aside class="w-64 flex-shrink-0 h-full overflow-y-auto border-r border-slate-200/80 bg-white/90 backdrop-blur-md p-6 hidden md:block">
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-3">Foundations</div>
+          <nav class="space-y-1 mb-6 text-sm">
+            <a href="#sec-typography" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-navy"></span> Typography
+            </a>
+            <a href="#sec-colors" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span> Colors
+            </a>
+            <a href="#sec-backgrounds" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-navy-800"></span> Backgrounds
+            </a>
+            <a href="#sec-surfaces" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span> Surfaces
+            </a>
+            <a href="#sec-icons" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-navy"></span> Icons
+            </a>
+          </nav>
+
+          <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 px-3">Components</div>
+          <nav class="space-y-1 text-sm">
+            <a href="#sec-actions" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span> Actions & Buttons
+            </a>
+            <a href="#sec-navigation" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-navy"></span> Navigation & Menus
+            </a>
+            <a href="#sec-badges" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-coral"></span> Badges & Tags
+            </a>
+            <a href="#sec-cards" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-navy"></span> Cards & Containers
+            </a>
+            <a href="#sec-metrics" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span> Data & Metrics
+            </a>
+            <a href="#sec-disclosure" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-600 hover:text-navy hover:bg-navy-50/60 font-medium transition-colors">
+              <span class="w-1.5 h-1.5 rounded-full bg-navy"></span> Disclosure & Modals
+            </a>
+          </nav>
+        </aside>
+
+        <!-- Main Specimen Area -->
+        <div class="flex-1 h-full overflow-y-auto p-6 md:p-10 lg:p-12 space-y-16">
+          
+          <!-- 1. TYPOGRAPHY -->
+          <section id="sec-typography" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Foundation</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Typography</h2>
+              <p class="text-slate-500 text-sm mt-1">Orderly hierarchical rows using Inter font family, exact source classes, weights, and declared CSS font sizes.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm divide-y divide-slate-100">
+              
+              <!-- Row: Display Heading -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center bg-navy-900 text-white rounded-t-2xl">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Display Heading</div>
+                  <div class="text-sm font-medium text-slate-200 mt-0.5">Inter • Semibold (600)</div>
+                  <code class="specimen-code mt-1 inline-block !bg-white/10 !text-slate-300">text-4xl md:text-6xl lg:text-7xl</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <h1 class="text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.1]">
+                    LinguaPro <br class="hidden md:block">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-white">Design System</span>
+                  </h1>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-400">4.5rem | 3.75rem | 2.25rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Heading 1 -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Heading 1</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Semibold (600)</div>
+                  <code class="specimen-code mt-1 inline-block">text-3xl md:text-5xl</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-navy-900">
+                    Sed ut perspiciatis unde omnis iste natus
+                  </h2>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">3.0rem | 1.875rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Heading 2 -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Heading 2</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Semibold (600)</div>
+                  <code class="specimen-code mt-1 inline-block">text-3xl md:text-4xl</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-navy-900">
+                    Consectetur adipiscing elit sed do eiusmod
+                  </h2>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">2.25rem | 1.875rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Heading 3 -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Heading 3</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Semibold (600)</div>
+                  <code class="specimen-code mt-1 inline-block">text-2xl</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <h3 class="text-2xl font-semibold text-navy-900">
+                    Complete Enrollment
+                  </h3>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">1.5rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Heading 4 -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Heading 4</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Semibold (600)</div>
+                  <code class="specimen-code mt-1 inline-block">text-xl font-semibold</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <h4 class="text-xl font-semibold text-navy-900 tracking-tight">
+                    Tempor incididunt ut labore
+                  </h4>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">1.25rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Eyebrow / Kicker -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Eyebrow / Kicker</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Medium (500)</div>
+                  <code class="specimen-code mt-1 inline-block">text-sm tracking-wider uppercase</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <span class="text-coral font-medium tracking-wider uppercase text-sm">
+                    LOREM IPSUM DOLOR
+                  </span>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">0.875rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Body Large / Lead -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Body Large</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Regular (400)</div>
+                  <code class="specimen-code mt-1 inline-block">text-lg leading-relaxed</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <p class="text-lg text-slate-600 leading-relaxed">
+                    A cohesive interface system featuring deep navy surfaces, vibrant coral accents, responsive typography, and refined translucent cards.
+                  </p>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">1.125rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Body Base -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Body Base</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Regular (400)</div>
+                  <code class="specimen-code mt-1 inline-block">text-base text-slate-600</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <p class="text-base text-slate-600 leading-relaxed">
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.
+                  </p>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">1.0rem</span>
+                </div>
+              </div>
+
+              <!-- Row: Caption / Small -->
+              <div class="p-6 grid grid-cols-12 gap-4 items-center">
+                <div class="col-span-12 md:col-span-3">
+                  <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Caption / Metadata</div>
+                  <div class="text-sm font-medium text-slate-700 mt-0.5">Inter • Regular / Medium</div>
+                  <code class="specimen-code mt-1 inline-block">text-xs text-slate-500</code>
+                </div>
+                <div class="col-span-12 md:col-span-7">
+                  <p class="text-xs text-slate-500">
+                    Weekly reports included • Secure connection via Stripe • CEFR Certified
+                  </p>
+                </div>
+                <div class="col-span-12 md:col-span-2 text-right">
+                  <span class="text-xs font-mono font-medium text-slate-500">0.75rem</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 2. COLORS -->
+          <section id="sec-colors" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Foundation</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Colors</h2>
+              <p class="text-slate-500 text-sm mt-1">Colors grouped strictly by their observed function, with real active values and source tokens.</p>
+            </div>
+
+            <!-- Group: Brand & Accent -->
+            <div class="mb-8">
+              <h3 class="text-base font-semibold text-navy-900 mb-3 flex items-center gap-2">
+                Brand & Accent
+              </h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-navy mb-3 shadow-inner flex items-end p-2.5">
+                    <span class="text-xs font-mono text-white/80">#0B3D91</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Primary Brand Navy</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">theme.colors.navy.DEFAULT</div>
+                  <p class="text-xs text-slate-500 mt-2">Primary brand identity, logo background, core icons.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-navy-900 mb-3 shadow-inner flex items-end p-2.5">
+                    <span class="text-xs font-mono text-white/80">#051D47</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Deep Navy</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">theme.colors.navy.900</div>
+                  <p class="text-xs text-slate-500 mt-2">Dark hero base, footer surface, primary headings.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-coral mb-3 shadow-inner flex items-end p-2.5">
+                    <span class="text-xs font-mono text-white/80">#E94E4E</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Vibrant Coral</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">theme.colors.coral.DEFAULT</div>
+                  <p class="text-xs text-slate-500 mt-2">High-contrast CTA buttons, live badges, active highlights.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-[#D63D3D] mb-3 shadow-inner flex items-end p-2.5">
+                    <span class="text-xs font-mono text-white/80">#D63D3D</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Coral Hover</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">theme.colors.coral.hover</div>
+                  <p class="text-xs text-slate-500 mt-2">Pressed/hover state for primary actions.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Group: Surfaces -->
+            <div class="mb-8">
+              <h3 class="text-base font-semibold text-navy-900 mb-3">Surfaces</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-white border border-slate-200 mb-3 flex items-end p-2.5">
+                    <span class="text-xs font-mono text-slate-600">#FFFFFF</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Base White Surface</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">bg-white</div>
+                  <p class="text-xs text-slate-500 mt-2">Primary section canvas, standard content cards.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-slate-50 border border-slate-200 mb-3 flex items-end p-2.5">
+                    <span class="text-xs font-mono text-slate-600">#F8FAFC</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Neutral Light Surface</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">bg-slate-50</div>
+                  <p class="text-xs text-slate-500 mt-2">Alternating sections, accordion item headers.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-navy-50 border border-navy-100 mb-3 flex items-end p-2.5">
+                    <span class="text-xs font-mono text-navy-800">#F0F4FA</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Tinted Navy Tint</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">theme.colors.navy.50</div>
+                  <p class="text-xs text-slate-500 mt-2">Step indicator backgrounds, active navigation pills.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-20 rounded-lg bg-navy-900 mb-3 flex items-end p-2.5">
+                    <span class="text-xs font-mono text-white/80">#051D47</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Dark Featured Surface</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">bg-navy-900</div>
+                  <p class="text-xs text-slate-500 mt-2">Highlighted pricing tier, footer foundation.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Group: Interactive States Family -->
+            <div class="mb-8">
+              <h3 class="text-base font-semibold text-navy-900 mb-3">Interactive States (Default | Hover | Active)</h3>
+              <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <!-- Coral Button States -->
+                  <div>
+                    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Coral Action Button</div>
+                    <div class="space-y-2">
+                      <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50">
+                        <span class="text-xs font-medium text-slate-600">Default</span>
+                        <div class="px-3 py-1 bg-coral text-white text-xs font-medium rounded-md shadow-sm">Get Started</div>
+                        <span class="text-[11px] font-mono text-slate-400">#E94E4E</span>
+                      </div>
+                      <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50">
+                        <span class="text-xs font-medium text-slate-600">Hover</span>
+                        <div class="px-3 py-1 bg-[#D63D3D] text-white text-xs font-medium rounded-md shadow-sm">Get Started</div>
+                        <span class="text-[11px] font-mono text-slate-400">#D63D3D</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Text Nav Link States -->
+                  <div>
+                    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Navbar Text Link</div>
+                    <div class="space-y-2">
+                      <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50">
+                        <span class="text-xs font-medium text-slate-600">Default</span>
+                        <span class="text-sm font-medium text-slate-600">Why Us</span>
+                        <span class="text-[11px] font-mono text-slate-400">#475569</span>
+                      </div>
+                      <div class="flex items-center justify-between p-2.5 rounded-lg bg-slate-50">
+                        <span class="text-xs font-medium text-slate-600">Hover</span>
+                        <span class="text-sm font-medium text-navy">Why Us</span>
+                        <span class="text-[11px] font-mono text-slate-400">#0B3D91</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Ghost Action States -->
+                  <div>
+                    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Ghost Glass Action</div>
+                    <div class="space-y-2 bg-navy-900 p-2.5 rounded-lg">
+                      <div class="flex items-center justify-between p-1.5">
+                        <span class="text-xs font-medium text-slate-300">Default</span>
+                        <div class="px-3 py-1 bg-white/10 text-white text-xs font-medium rounded-md">Explore</div>
+                        <span class="text-[11px] font-mono text-slate-400">white/10</span>
+                      </div>
+                      <div class="flex items-center justify-between p-1.5">
+                        <span class="text-xs font-medium text-slate-300">Hover</span>
+                        <div class="px-3 py-1 bg-white/20 text-white text-xs font-medium rounded-md">Explore</div>
+                        <span class="text-[11px] font-mono text-slate-400">white/20</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Group: Semantic & Accents -->
+            <div>
+              <h3 class="text-base font-semibold text-navy-900 mb-3">Semantic & Feedback</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="specimen-card p-4">
+                  <div class="h-16 rounded-lg bg-green-500 mb-3 flex items-end p-2.5">
+                    <span class="text-xs font-mono text-white">#22C55E</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Success Green</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">text-green-500 / bg-green-500</div>
+                  <p class="text-xs text-slate-500 mt-2">Progress bar fill (85%), checklist confirmation marks.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-16 rounded-lg bg-amber-400 mb-3 flex items-end p-2.5">
+                    <span class="text-xs font-mono text-slate-900 font-semibold">#FBBF24</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Rating Amber</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">text-amber-400 fill-amber-400</div>
+                  <p class="text-xs text-slate-500 mt-2">Testimonial 5-star student review indicators.</p>
+                </div>
+
+                <div class="specimen-card p-4">
+                  <div class="h-16 rounded-lg bg-slate-900/60 backdrop-blur-sm mb-3 flex items-end p-2.5 border border-slate-700">
+                    <span class="text-xs font-mono text-white/80">rgba(15, 23, 42, 0.6)</span>
+                  </div>
+                  <div class="text-sm font-semibold text-navy-900">Modal Dim Backdrop</div>
+                  <div class="text-xs font-mono text-slate-500 mt-0.5">bg-slate-900/60 backdrop-blur-sm</div>
+                  <p class="text-xs text-slate-500 mt-2">Focus overlay behind modal dialogs.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- 3. BACKGROUNDS -->
+          <section id="sec-backgrounds" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Foundation</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Backgrounds</h2>
+              <p class="text-slate-500 text-sm mt-1">Every distinct observed background rendered live with its real assets, layers, mix-blend modes, and gradients.</p>
+            </div>
+
+            <div class="space-y-6">
+              
+              <!-- Specimen: Hero Atmospheric Blend -->
+              <div class="specimen-card">
+                <div class="specimen-header">
+                  <div>
+                    <span class="text-sm font-semibold text-navy-900">Hero Atmospheric Background</span>
+                    <span class="text-xs text-slate-500 ml-2">Photographic cover + Navy-900 multiply layer + vertical gradient</span>
+                  </div>
+                  <code class="specimen-code">bg-navy-900/80 mix-blend-multiply</code>
+                </div>
+                <div class="relative h-72 w-full overflow-hidden rounded-b-xl">
+                  <img src="assets/overview/assets/images.unsplash.com/photo-1523240795612-9a054b0db644__qf0cc1237.avif" alt="Students talking" class="w-full h-full object-cover" loading="eager">
+                  <div class="absolute inset-0 bg-navy-900/80 mix-blend-multiply"></div>
+                  <div class="bg-gradient-to-t from-navy-900 via-transparent to-transparent absolute inset-0"></div>
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-3 rounded-xl text-center">
+                      <div class="text-base font-semibold">Live Background Specimen</div>
+                      <div class="text-xs text-slate-200 mt-0.5">Exact layer stack from Hero Section</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Specimen: Alternating Neutral & Navy -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="specimen-card">
+                  <div class="specimen-header">
+                    <span class="text-sm font-semibold text-navy-900">Neutral Section Background</span>
+                    <code class="specimen-code">bg-slate-50</code>
+                  </div>
+                  <div class="h-44 bg-slate-50 flex items-center justify-center p-6 border-t border-slate-100">
+                    <div class="text-sm font-medium text-slate-600 bg-white px-4 py-2 rounded-lg border border-slate-200 shadow-sm">
+                      bg-slate-50 surface container
+                    </div>
+                  </div>
+                </div>
+
+                <div class="specimen-card">
+                  <div class="specimen-header">
+                    <span class="text-sm font-semibold text-navy-900">Dark Foundation Background</span>
+                    <code class="specimen-code">bg-navy-900 border-t border-white/5</code>
+                  </div>
+                  <div class="h-44 bg-navy-900 flex items-center justify-center p-6 border-t border-navy-800">
+                    <div class="text-sm font-medium text-slate-300 bg-navy-800/80 px-4 py-2 rounded-lg border border-white/10">
+                      bg-navy-900 footer & card foundation
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 4. SURFACES -->
+          <section id="sec-surfaces" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Foundation</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Surfaces</h2>
+              <p class="text-slate-500 text-sm mt-1">Clearly recurring surfaces displayed live on the background where they are used.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Frosted Glass on Dark -->
+              <div class="specimen-card overflow-hidden">
+                <div class="specimen-header">
+                  <span class="text-sm font-semibold text-navy-900">Frosted Glass Surface (Dark Context)</span>
+                  <code class="specimen-code">bg-white/10 backdrop-blur-md</code>
+                </div>
+                <div class="p-8 bg-navy-900 relative">
+                  <div class="p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl text-white">
+                    <div class="text-sm font-semibold">Translucent Pill / Dock Surface</div>
+                    <div class="text-xs text-slate-200 mt-1">Preserves 10% opacity, border-white/20 and backdrop blur filter.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frosted Header on Light -->
+              <div class="specimen-card overflow-hidden">
+                <div class="specimen-header">
+                  <span class="text-sm font-semibold text-navy-900">Frosted Header Surface (Light Context)</span>
+                  <code class="specimen-code">bg-white/90 backdrop-blur-md</code>
+                </div>
+                <div class="p-8 bg-slate-100 relative">
+                  <div class="p-6 bg-white/90 backdrop-blur-md border border-slate-200 rounded-2xl shadow-sm">
+                    <div class="text-sm font-semibold text-navy-900">Navigation Header Surface</div>
+                    <div class="text-xs text-slate-600 mt-1">Preserves 90% white fill, border-b border-slate-100 and blur.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Elevated Card on Neutral -->
+              <div class="specimen-card overflow-hidden">
+                <div class="specimen-header">
+                  <span class="text-sm font-semibold text-navy-900">Elevated Card Surface</span>
+                  <code class="specimen-code">bg-white border-slate-200 shadow-sm</code>
+                </div>
+                <div class="p-8 bg-slate-50">
+                  <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-shadow">
+                    <div class="text-base font-semibold text-navy-900">Standard Card Surface</div>
+                    <div class="text-xs text-slate-500 mt-1">Smooth shadow elevate on hover with rounded-2xl border radius.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Soft Interactive Surface -->
+              <div class="specimen-card overflow-hidden">
+                <div class="specimen-header">
+                  <span class="text-sm font-semibold text-navy-900">Interactive Soft Surface</span>
+                  <code class="specimen-code">bg-slate-50 hover:bg-navy-50</code>
+                </div>
+                <div class="p-8 bg-white">
+                  <div class="bg-slate-50 hover:bg-navy-50 p-6 rounded-2xl border border-slate-100 transition-colors">
+                    <div class="text-base font-semibold text-navy-900">Soft Container Surface</div>
+                    <div class="text-xs text-slate-600 mt-1">Transitions dynamically from slate-50 to navy-50 on pointer hover.</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 5. ICONS -->
+          <section id="sec-icons" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Foundation</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Icons</h2>
+              <p class="text-slate-500 text-sm mt-1">All 20 distinct Lucide icons observed across Overview, displayed in a simple 5-column grid without decorative cards.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-5 gap-8 text-center">
+                
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="languages" class="lucide lucide-languages w-6 h-6 text-navy mb-2"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">languages</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-6 h-6 text-coral mb-2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">arrow-right</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="lucide lucide-check w-6 h-6 text-green-500 mb-2"><path d="M20 6 9 17l-5-5"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">check</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="star" class="lucide lucide-star w-6 h-6 text-amber-400 fill-amber-400 mb-2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <span class="text-xs font-mono text-slate-600">star</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-6 h-6 text-navy mb-2"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+                  <span class="text-xs font-mono text-slate-600">video</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock w-6 h-6 text-navy mb-2"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                  <span class="text-xs font-mono text-slate-600">clock</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" class="lucide lucide-award w-6 h-6 text-navy mb-2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                  <span class="text-xs font-mono text-slate-600">award</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="lucide lucide-calendar w-6 h-6 text-navy mb-2"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">calendar</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-6 h-6 text-navy mb-2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">users</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" class="lucide lucide-briefcase w-6 h-6 text-navy mb-2"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg>
+                  <span class="text-xs font-mono text-slate-600">briefcase</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="book-open" class="lucide lucide-book-open w-6 h-6 text-navy mb-2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">book-open</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6 text-slate-500 mb-2"><path d="m6 9 6 6 6-6"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">chevron-down</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="quote" class="lucide lucide-quote w-6 h-6 text-navy-800 mb-2"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">quote</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" class="lucide lucide-lock w-6 h-6 text-slate-400 mb-2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">lock</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="credit-card" class="lucide lucide-credit-card w-6 h-6 text-slate-400 mb-2"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                  <span class="text-xs font-mono text-slate-600">credit-card</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="lucide lucide-x w-6 h-6 text-slate-400 mb-2"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">x</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" class="lucide lucide-menu w-6 h-6 text-slate-600 mb-2"><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">menu</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="facebook" class="lucide lucide-facebook w-6 h-6 text-slate-400 mb-2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">facebook</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="instagram" class="lucide lucide-instagram w-6 h-6 text-slate-400 mb-2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                  <span class="text-xs font-mono text-slate-600">instagram</span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center p-3 hover:bg-slate-50 rounded-xl transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="twitter" class="lucide lucide-twitter w-6 h-6 text-slate-400 mb-2"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                  <span class="text-xs font-mono text-slate-600">twitter</span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- 6. ACTIONS & BUTTONS -->
+          <section id="sec-actions" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Component</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Actions & Buttons</h2>
+              <p class="text-slate-500 text-sm mt-1">Primary, ghost, outline, and icon action controls observed in Overview.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              
+              <!-- Primary Action (Hero) -->
+              <div class="specimen-card">
+                <div class="specimen-header">
+                  <div>
+                    <span class="text-sm font-semibold text-navy-900">Primary CTA Button (Hero)</span>
+                    <span class="text-xs text-slate-500 ml-2">Large format with arrow icon and glowing shadow</span>
+                  </div>
+                  <code class="specimen-code">bg-coral text-white px-8 py-4 rounded-xl</code>
+                </div>
+                <div class="specimen-body flex flex-wrap gap-4 items-center">
+                  <button class="bg-coral hover:bg-coral-hover text-white px-8 py-4 rounded-xl text-lg font-medium transition-all shadow-xl shadow-coral/20 flex items-center justify-center gap-2">
+                    Lorem Ipsum Dolor
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right" class="lucide lucide-arrow-right w-5 h-5"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Compact Header Action -->
+              <div class="specimen-card">
+                <div class="specimen-header">
+                  <div>
+                    <span class="text-sm font-semibold text-navy-900">Header Action Button</span>
+                    <span class="text-xs text-slate-500 ml-2">Compact format for global navigation header</span>
+                  </div>
+                  <code class="specimen-code">bg-coral px-5 py-2.5 rounded-lg text-sm</code>
+                </div>
+                <div class="specimen-body flex flex-wrap gap-4 items-center">
+                  <button class="bg-coral hover:bg-coral-hover text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all shadow-lg shadow-coral/20">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+
+              <!-- Ghost Translucent Action -->
+              <div class="specimen-card bg-navy-900 text-white">
+                <div class="specimen-header !bg-navy-800 !border-navy-700">
+                  <div>
+                    <span class="text-sm font-semibold text-white">Ghost Secondary Action</span>
+                    <span class="text-xs text-slate-400 ml-2">Designed for photographic or dark backgrounds</span>
+                  </div>
+                  <code class="specimen-code !bg-white/10 !text-slate-200">bg-white/10 hover:bg-white/20</code>
+                </div>
+                <div class="specimen-body flex flex-wrap gap-4 items-center">
+                  <button class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white px-8 py-4 rounded-xl text-lg font-medium transition-all flex items-center justify-center">
+                    Consectetur Elit
+                  </button>
+                </div>
+              </div>
+
+              <!-- Outline Secondary Action -->
+              <div class="specimen-card">
+                <div class="specimen-header">
+                  <div>
+                    <span class="text-sm font-semibold text-navy-900">Outline Tier Action</span>
+                    <span class="text-xs text-slate-500 ml-2">Used in standard pricing tiers and details modal</span>
+                  </div>
+                  <code class="specimen-code">border border-navy text-navy</code>
+                </div>
+                <div class="specimen-body flex flex-wrap gap-4 items-center">
+                  <button class="w-full sm:w-auto py-3 px-6 border border-navy text-navy font-medium rounded-xl hover:bg-navy-50 transition-colors">
+                    Lorem Ipsum
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 7. NAVIGATION & MENUS -->
+          <section id="sec-navigation" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Component</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Navigation & Menus</h2>
+              <p class="text-slate-500 text-sm mt-1">Full-fidelity live specimen of the brand header navbar and mobile menu drawer.</p>
+            </div>
+
+            <!-- Header Navbar Specimen -->
+            <div class="specimen-card overflow-hidden mb-6">
+              <div class="specimen-header">
+                <span class="text-sm font-semibold text-navy-900">Desktop Navigation Header</span>
+                <code class="specimen-code">header#navbar fixed bg-white/90 backdrop-blur-md</code>
+              </div>
+              <div class="p-4 bg-slate-100">
+                <div class="bg-white/95 rounded-xl border border-slate-200/80 shadow-sm px-6 py-3">
+                  <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                      <div class="w-9 h-9 bg-navy rounded-lg flex items-center justify-center mr-3 text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="languages"><path d="m5 8 6 6"></path><path d="m4 14 6-6 2-3"></path><path d="M2 5h12"></path><path d="M7 2h1"></path><path d="m22 22-5-10-5 10"></path><path d="M14 18h6"></path></svg>
+                      </div>
+                      <span class="text-lg font-semibold tracking-tight text-navy-900">LinguaPro</span>
+                    </div>
+
+                    <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                      <span class="hover:text-navy cursor-pointer">Why Us</span>
+                      <span class="hover:text-navy cursor-pointer">Courses</span>
+                      <span class="hover:text-navy cursor-pointer">Pricing</span>
+                      <span class="hover:text-navy cursor-pointer">FAQ</span>
+                    </nav>
+
+                    <div class="flex items-center space-x-3">
+                      <span class="text-sm font-medium text-navy cursor-pointer">Log in</span>
+                      <button class="bg-coral text-white px-4 py-2 rounded-lg text-xs font-medium shadow-md shadow-coral/20">
+                        Get Started
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mobile Drawer Specimen -->
+            <div class="specimen-card overflow-hidden">
+              <div class="specimen-header">
+                <span class="text-sm font-semibold text-navy-900">Mobile Navigation Drawer</span>
+                <code class="specimen-code">#mobile-menu bg-white border-b</code>
+              </div>
+              <div class="p-6 bg-slate-50 max-w-sm mx-auto">
+                <div class="bg-white border border-slate-200 rounded-xl p-4 shadow-sm space-y-2">
+                  <div class="px-3 py-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-50 cursor-pointer">Why Us</div>
+                  <div class="px-3 py-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-50 cursor-pointer">Courses</div>
+                  <div class="px-3 py-2.5 text-sm font-medium text-slate-700 rounded-md hover:bg-slate-50 cursor-pointer">Pricing</div>
+                  <button class="w-full mt-2 bg-coral text-white px-4 py-2.5 rounded-lg text-sm font-medium text-center shadow-sm">
+                    Enroll Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- 8. BADGES & TAGS -->
+          <section id="sec-badges" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Component</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Badges & Tags</h2>
+              <p class="text-slate-500 text-sm mt-1">Status pills, live category chips, and promotional ribbons.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
+                
+                <!-- Live Pulse Pill -->
+                <div class="bg-navy-900 p-4 rounded-xl flex items-center justify-center">
+                  <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-1.5">
+                    <span class="flex h-2 w-2 rounded-full bg-coral animate-pulse"></span>
+                    <span class="text-xs font-medium text-white tracking-wide uppercase">Design System Foundations</span>
+                  </div>
+                </div>
+
+                <!-- Light Category Pill -->
+                <div class="bg-slate-100 p-4 rounded-xl flex items-center justify-center">
+                  <span class="bg-white/95 backdrop-blur text-navy text-xs font-semibold px-3.5 py-1 rounded-full shadow-sm border border-slate-200/60">
+                    Beginner
+                  </span>
+                </div>
+
+                <!-- Dark Category Pill -->
+                <div class="bg-slate-100 p-4 rounded-xl flex items-center justify-center">
+                  <span class="bg-navy text-white text-xs font-semibold px-3.5 py-1 rounded-full shadow-sm">
+                    Popular
+                  </span>
+                </div>
+
+                <!-- Promotional Ribbon -->
+                <div class="bg-slate-100 p-4 rounded-xl flex items-center justify-center">
+                  <span class="bg-coral text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase shadow-sm">
+                    MOST POPULAR
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- 9. CARDS & CONTAINERS -->
+          <section id="sec-cards" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Component</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Cards & Containers</h2>
+              <p class="text-slate-500 text-sm mt-1">Reconstructed directly from Overview: benefit cards, course listing cards, pricing cards, and testimonials.</p>
+            </div>
+
+            <div class="space-y-8">
+              
+              <!-- 1. Feature Benefit Card -->
+              <div>
+                <h3 class="text-base font-semibold text-navy-900 mb-3">Feature Benefit Card</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  
+                  <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-navy-50 transition-colors duration-300 border border-slate-100">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-navy mb-6 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="video" class="lucide lucide-video w-6 h-6"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-3 tracking-tight">Tempor incididunt ut labore</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur.
+                    </p>
+                  </div>
+
+                  <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-navy-50 transition-colors duration-300 border border-slate-100">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-navy mb-6 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock w-6 h-6"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-3 tracking-tight">Dolore magna aliqua</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+
+                  <div class="group p-6 rounded-2xl bg-slate-50 hover:bg-navy-50 transition-colors duration-300 border border-slate-100">
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-navy mb-6 group-hover:scale-110 transition-transform">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="award" class="lucide lucide-award w-6 h-6"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path><circle cx="12" cy="8" r="6"></circle></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-navy-900 mb-3 tracking-tight">Ullamco laboris nisi</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- 2. Course Catalog Card -->
+              <div>
+                <h3 class="text-base font-semibold text-navy-900 mb-3">Course Catalog Card</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  
+                  <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                      <img src="assets/overview/assets/images.unsplash.com/photo-1571260899304-425eee4c7efc__qf0cc1237.avif" alt="Course" class="w-full h-full object-cover">
+                      <span class="absolute top-4 right-4 bg-white/90 backdrop-blur text-navy text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Beginner
+                      </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                      <div class="flex items-center gap-4 text-xs font-medium text-slate-500 mb-3">
+                        <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="w-4 h-4"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg> 8 Weeks</span>
+                        <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="w-4 h-4"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg> Group</span>
+                      </div>
+                      <h3 class="text-xl font-semibold text-navy-900 mb-2 tracking-tight">Lorem Ipsum Dolor Sit</h3>
+                      <p class="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.</p>
+                      <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                        <span class="text-2xl font-semibold text-navy-900">$199</span>
+                        <button class="text-navy hover:text-navy-800 font-medium text-sm flex items-center gap-1">
+                          Lorem Ipsum <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                      <img src="assets/overview/assets/images.unsplash.com/photo-1552664730-d307ca884978__qf0cc1237.avif" alt="Course" class="w-full h-full object-cover">
+                      <span class="absolute top-4 right-4 bg-navy text-white text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Popular
+                      </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                      <div class="flex items-center gap-4 text-xs font-medium text-slate-500 mb-3">
+                        <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="w-4 h-4"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg> 12 Weeks</span>
+                        <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="briefcase" class="w-4 h-4"><rect width="20" height="14" x="2" y="6" rx="2"></rect></svg> Career</span>
+                      </div>
+                      <h3 class="text-xl font-semibold text-navy-900 mb-2 tracking-tight">Consectetur Adipiscing Elit</h3>
+                      <p class="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+                      <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                        <span class="text-2xl font-semibold text-navy-900">$349</span>
+                        <button class="text-navy hover:text-navy-800 font-medium text-sm flex items-center gap-1">
+                          Lorem Ipsum <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-48 overflow-hidden">
+                      <img src="assets/overview/assets/images.unsplash.com/photo-1543269865-cbf427effbad__qf0cc1237.avif" alt="Course" class="w-full h-full object-cover">
+                      <span class="absolute top-4 right-4 bg-white/90 backdrop-blur text-navy text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+                        Advanced
+                      </span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                      <div class="flex items-center gap-4 text-xs font-medium text-slate-500 mb-3">
+                        <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" class="w-4 h-4"><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg> 6 Weeks</span>
+                        <span class="flex items-center gap-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="book-open" class="w-4 h-4"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path></svg> Exam</span>
+                      </div>
+                      <h3 class="text-xl font-semibold text-navy-900 mb-2 tracking-tight">Tempor Incididunt Labore</h3>
+                      <p class="text-slate-600 text-sm mb-6 flex-1 leading-relaxed">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                      <div class="flex items-center justify-between border-t border-slate-100 pt-4 mt-auto">
+                        <span class="text-2xl font-semibold text-navy-900">$299</span>
+                        <button class="text-navy hover:text-navy-800 font-medium text-sm flex items-center gap-1">
+                          Lorem Ipsum <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-right"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- 3. Pricing Tier Cards -->
+              <div>
+                <h3 class="text-base font-semibold text-navy-900 mb-3">Pricing Tier Cards (Standard & Featured)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                  
+                  <!-- Basic Tier -->
+                  <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold text-navy-900">Basic</h3>
+                    <p class="text-slate-500 mt-2 text-sm">Sed do eiusmod tempor</p>
+                    <div class="mt-6 mb-8">
+                      <span class="text-4xl font-bold text-navy-900">$49</span>
+                      <span class="text-slate-500">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-slate-600 text-sm">
+                      <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="text-green-500 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Lorem ipsum dolor sit amet</li>
+                      <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="text-green-500 shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Consectetur adipiscing elit</li>
+                      <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="text-slate-300 shrink-0"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg> Incididunt ut labore</li>
+                    </ul>
+                    <button class="w-full py-3 px-4 border border-navy text-navy font-medium rounded-xl hover:bg-navy-50 transition-colors">Lorem Ipsum</button>
+                  </div>
+
+                  <!-- Featured Intensive Tier -->
+                  <div class="bg-navy-900 rounded-2xl p-8 border border-navy-900 shadow-2xl relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-coral text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">MOST POPULAR</div>
+                    <h3 class="text-xl font-semibold text-white">Intensive</h3>
+                    <p class="text-slate-300 mt-2 text-sm">Ut labore et dolore</p>
+                    <div class="mt-6 mb-8">
+                      <span class="text-4xl font-bold text-white">$129</span>
+                      <span class="text-slate-400">/mo</span>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-slate-300 text-sm">
+                      <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="text-coral shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Dolore magna aliqua enim</li>
+                      <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="text-coral shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Minim veniam quis nostrud</li>
+                      <li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="text-coral shrink-0"><path d="M20 6 9 17l-5-5"></path></svg> Aliquip ex ea commodo</li>
+                    </ul>
+                    <button class="w-full py-3 px-4 bg-coral hover:bg-coral-hover text-white font-medium rounded-xl transition-all shadow-lg shadow-coral/30">Dolor Sit</button>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- 4. Testimonial Card -->
+              <div>
+                <h3 class="text-base font-semibold text-navy-900 mb-3">Testimonial Quote Card</h3>
+                <div class="bg-navy-900 rounded-2xl p-8 border border-white/10 text-white max-w-xl">
+                  <div class="flex gap-1 mb-6 text-amber-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" class="w-5 h-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" class="w-5 h-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" class="w-5 h-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" class="w-5 h-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" class="w-5 h-5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  </div>
+                  <p class="text-lg text-slate-200 mb-6 italic">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
+                  <div class="flex items-center gap-4">
+                    <img src="assets/overview/assets/randomuser.me/api/portraits/men/32.jpg" alt="Carlos M." class="w-12 h-12 rounded-full border-2 border-coral">
+                    <div>
+                      <h4 class="font-semibold text-white">Lorem M.</h4>
+                      <span class="text-sm text-slate-400">Consectetur, Region A</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 10. DATA & METRICS -->
+          <section id="sec-metrics" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Component</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Data Display & Metrics</h2>
+              <p class="text-slate-500 text-sm mt-1">Hero statistics counter dock, numbered methodology items, and live progress indicators.</p>
+            </div>
+
+            <div class="space-y-6">
+              
+              <!-- Stats Counter Dock -->
+              <div class="specimen-card overflow-hidden">
+                <div class="specimen-header">
+                  <span class="text-sm font-semibold text-navy-900">Hero Statistics Counter Dock</span>
+                  <code class="specimen-code">bg-navy-900/40 backdrop-blur-md border-t border-white/10</code>
+                </div>
+                <div class="p-8 bg-navy-900">
+                  <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                    <div>
+                      <div class="text-3xl font-semibold tracking-tight">15k+</div>
+                      <div class="text-sm text-slate-300 font-medium mt-1">Lorem Ipsum</div>
+                    </div>
+                    <div>
+                      <div class="text-3xl font-semibold tracking-tight">98%</div>
+                      <div class="text-sm text-slate-300 font-medium mt-1">Dolor Sit Amet</div>
+                    </div>
+                    <div>
+                      <div class="text-3xl font-semibold tracking-tight">120+</div>
+                      <div class="text-sm text-slate-300 font-medium mt-1">Consectetur</div>
+                    </div>
+                    <div>
+                      <div class="text-3xl font-semibold tracking-tight">24/7</div>
+                      <div class="text-sm text-slate-300 font-medium mt-1">Adipiscing Elit</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Numbered Steps & Floating Progress Chip -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                
+                <!-- Numbered Steps -->
+                <div class="specimen-card p-6 space-y-6">
+                  <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-100 text-navy flex items-center justify-center font-semibold text-sm">01</div>
+                    <div>
+                      <h4 class="text-base font-semibold text-navy-900">Primis In Faucibus</h4>
+                      <p class="text-sm text-slate-500 mt-1">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-100 text-navy flex items-center justify-center font-semibold text-sm">02</div>
+                    <div>
+                      <h4 class="text-base font-semibold text-navy-900">Integer Tincidunt</h4>
+                      <p class="text-sm text-slate-500 mt-1">Phasellus viverra nulla ut metus varius laoreet quisque rutrum aenean imperdiet etiam.</p>
+                    </div>
+                  </div>
+
+                  <div class="flex gap-4 items-start">
+                    <div class="flex-shrink-0 w-8 h-8 rounded-full bg-navy-100 text-navy flex items-center justify-center font-semibold text-sm">03</div>
+                    <div>
+                      <h4 class="text-base font-semibold text-navy-900">Aenean Vulputate</h4>
+                      <p class="text-sm text-slate-500 mt-1">Curabitur ullamcorper ultricies nisi nam eget dui etiam rhoncus maecenas tempus.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating Progress Card -->
+                <div class="specimen-card p-8 bg-slate-50 flex items-center justify-center">
+                  <div class="bg-white p-6 rounded-xl shadow-xl max-w-xs w-full border border-slate-100">
+                    <div class="flex items-center gap-4 mb-3">
+                      <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" class="w-5 h-5"><path d="M20 6 9 17l-5-5"></path></svg>
+                      </div>
+                      <div>
+                        <p class="text-sm font-semibold text-slate-900">Lorem Ipsum</p>
+                        <p class="text-xs text-slate-500">Dolor sit amet</p>
+                      </div>
+                    </div>
+                    <div class="w-full bg-slate-100 rounded-full h-2 mb-1">
+                      <div class="bg-green-500 h-2 rounded-full" style="width: 85%"></div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          <!-- 11. DISCLOSURE & MODALS -->
+          <section id="sec-disclosure" class="scroll-mt-6">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-coral">Component</span>
+              <h2 class="text-2xl font-bold text-navy-900 tracking-tight mt-1">Disclosure & Modals</h2>
+              <p class="text-slate-500 text-sm mt-1">Accordion item panels and enrollment modal dialog specimen.</p>
+            </div>
+
+            <div class="space-y-8">
+              
+              <!-- Accordion Specimen -->
+              <div>
+                <h3 class="text-base font-semibold text-navy-900 mb-3">Interactive FAQ Accordion Item</h3>
+                <div class="max-w-3xl space-y-3">
+                  <div class="border border-slate-200 rounded-lg overflow-hidden bg-white shadow-sm">
+                    <button class="w-full flex justify-between items-center p-5 text-left bg-slate-50 hover:bg-slate-100 transition-colors" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('svg').classList.toggle('rotate-180')">
+                      <span class="font-medium text-navy-900">Curabitur ullamcorper ultricies nisi nam?</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="text-slate-500 transition-transform"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div class="p-5 pt-3 bg-white text-slate-600 text-sm border-t border-slate-100 leading-relaxed">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal Specimen -->
+              <div>
+                <h3 class="text-base font-semibold text-navy-900 mb-3">Enrollment Modal Dialog</h3>
+                <div class="bg-slate-900/60 p-6 sm:p-10 rounded-2xl backdrop-blur-sm flex justify-center">
+                  <div class="bg-white rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+                    <div class="flex justify-between items-center mb-6">
+                      <h3 class="text-2xl font-semibold leading-6 text-navy-900">Complete Enrollment</h3>
+                      <button class="text-slate-400 hover:text-slate-600 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                      </button>
+                    </div>
+
+                    <form class="space-y-4">
+                      <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                        <input type="text" placeholder="John Doe" class="w-full px-4 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-navy">
+                      </div>
+
+                      <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Email Address</label>
+                        <input type="email" placeholder="john@example.com" class="w-full px-4 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-navy">
+                      </div>
+
+                      <div class="pt-2">
+                        <button type="button" class="w-full bg-coral hover:bg-coral-hover text-white py-3 rounded-lg font-medium text-sm transition-all shadow-lg shadow-coral/20">
+                          Confirm & Pay
+                        </button>
+                        <p class="text-xs text-slate-500 mt-3 flex items-center justify-center gap-1">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lock" class="w-3.5 h-3.5 text-slate-400"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                          Secure connection via Stripe
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Initialize icons
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Hash routing between Overview and Components
+    function handleRoute() {
+      var hash = window.location.hash || '#overview';
+      var overviewTab = document.getElementById('tab-overview');
+      var componentsTab = document.getElementById('tab-components');
+      var overviewFrame = document.getElementById('view-overview');
+      var componentsView = document.getElementById('view-components');
+
+      if (hash.startsWith('#components') || hash.startsWith('#sec-')) {
+        overviewFrame.classList.add('hidden');
+        componentsView.classList.remove('hidden');
+
+        componentsTab.className = 'px-4 py-2 text-sm font-semibold rounded-lg transition-all bg-navy text-white shadow-sm';
+        overviewTab.className = 'px-4 py-2 text-sm font-semibold rounded-lg transition-all text-slate-600 hover:text-navy hover:bg-slate-50';
+        
+        // If an inner section anchor was requested, scroll to it
+        if (hash.startsWith('#sec-')) {
+          var targetEl = document.querySelector(hash);
+          if (targetEl) {
+            targetEl.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      } else {
+        componentsView.classList.add('hidden');
+        overviewFrame.classList.remove('hidden');
+
+        overviewTab.className = 'px-4 py-2 text-sm font-semibold rounded-lg transition-all bg-navy text-white shadow-sm';
+        componentsTab.className = 'px-4 py-2 text-sm font-semibold rounded-lg transition-all text-slate-600 hover:text-navy hover:bg-slate-50';
+      }
+    }
+
+    window.addEventListener('hashchange', handleRoute);
+    window.addEventListener('DOMContentLoaded', handleRoute);
+    if (!window.location.hash) {
+      window.location.hash = '#overview';
+    }
+  </script>
+</body>
+</html>

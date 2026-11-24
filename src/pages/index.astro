@@ -39,24 +39,24 @@
         extend: {
           colors: {
             navy: {
-              DEFAULT: '#0B3D91',
-              50: '#F0F4FA',
-              100: '#E1E8F5',
-              200: '#C3D3EB',
-              700: '#093278',
-              800: '#082A66',
-              900: '#051D47',
-              950: '#03122E'
+              DEFAULT: '#24576a',
+              50: '#edf5f7',
+              100: '#d9e9ed',
+              200: '#b5d3dc',
+              700: '#1e4959',
+              800: '#183b48',
+              900: '#24576a',
+              950: '#132e38'
             },
             coral: {
-              DEFAULT: '#E94E4E',
-              hover: '#D63D3D',
-              hanzo: '#FF3700'
+              DEFAULT: '#c0861a',
+              hover: '#aa7514',
+              hanzo: '#c0861a'
             },
             hanzo: {
-              field: '#E6ECF5',
-              ink: '#051D47',
-              orange: '#FF3700'
+              field: '#d9e9ed',
+              ink: '#24576a',
+              orange: '#c0861a'
             }
           },
           fontFamily: {
@@ -70,13 +70,13 @@
 
   <style is:global>
     :root {
-      --token-navy-900: #051D47;
-      --token-navy: #0B3D91;
-      --token-navy-50: #F0F4FA;
-      --token-coral: #E94E4E;
-      --token-coral-hover: #D63D3D;
-      --token-hanzo-orange: #FF3700;
-      --token-field: #E8EEF7;
+      --token-navy-900: #24576a;
+      --token-navy: #24576a;
+      --token-navy-50: #edf5f7;
+      --token-coral: #c0861a;
+      --token-coral-hover: #aa7514;
+      --token-hanzo-orange: #c0861a;
+      --token-field: #d9e9ed;
     }
 
     * {
@@ -92,8 +92,8 @@
       margin: 0;
       padding: 0;
       font-family: "Inter Display", "Inter", system-ui, -apple-system, sans-serif;
-      background: linear-gradient(225deg, #F8FAFC 0%, #E6ECF5 55%, #DCE5F2 100%);
-      color: #051D47;
+      background: linear-gradient(225deg, #F8FAFC 0%, #edf5f7 55%, #d9e9ed 100%);
+      color: #24576a;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
@@ -135,7 +135,7 @@
       top: -25%;
       bottom: -25%;
       width: 16%;
-      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(11, 61, 145, 0.12) 60%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(36, 87, 106, 0.14) 60%, rgba(255, 255, 255, 0) 100%);
       transform: skewX(45deg);
     }
 
@@ -182,13 +182,13 @@
     .hanzo-rule-left {
       width: 56px;
       height: 1px;
-      background: linear-gradient(90deg, rgba(5, 29, 71, 0) 0%, rgba(5, 29, 71, 0.45) 100%);
+      background: linear-gradient(90deg, rgba(36, 87, 106, 0) 0%, rgba(36, 87, 106, 0.45) 100%);
     }
 
     .hanzo-rule-right {
       width: 56px;
       height: 1px;
-      background: linear-gradient(270deg, rgba(5, 29, 71, 0) 0%, rgba(5, 29, 71, 0.45) 100%);
+      background: linear-gradient(270deg, rgba(36, 87, 106, 0) 0%, rgba(36, 87, 106, 0.45) 100%);
     }
 
     .hanzo-rule-left-light {
@@ -211,7 +211,7 @@
       border-radius: 20px;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.45),
-        12px 16px 24px -4px rgba(5, 29, 71, 0.09);
+        12px 16px 24px -4px rgba(36, 87, 106, 0.09);
       transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -219,7 +219,7 @@
       transform: rotate(0deg) translateY(-6px) !important;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.7),
-        16px 24px 36px -6px rgba(5, 29, 71, 0.14);
+        16px 24px 36px -6px rgba(36, 87, 106, 0.14);
     }
 
     .hanzo-glass-card {
@@ -230,15 +230,15 @@
       border-radius: 24px;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.32),
-        12px 16px 24px -4px rgba(5, 29, 71, 0.08);
+        12px 16px 24px -4px rgba(36, 87, 106, 0.08);
     }
 
     .hanzo-dark-frame {
-      background-color: #051D47;
+      background-color: #24576a;
       border-radius: 28px;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.28),
-        16px 24px 40px -8px rgba(5, 29, 71, 0.28);
+        16px 24px 40px -8px rgba(36, 87, 106, 0.28);
     }
 
     .hanzo-pill-chip {
@@ -247,7 +247,7 @@
       border-radius: 9999px;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.32),
-        10px 14px 18px 0 rgba(5, 29, 71, 0.08);
+        10px 14px 18px 0 rgba(36, 87, 106, 0.08);
       transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -283,36 +283,36 @@
     }
 
     .hanzo-btn-coral {
-      background-color: #E94E4E;
+      background-color: #c0861a;
       color: #FFFFFF;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.2),
-        0 14px 30px -6px rgba(233, 78, 78, 0.45),
-        inset 0 -14px 32px rgba(180, 30, 30, 0.35);
+        0 14px 30px -6px rgba(192, 134, 26, 0.45),
+        inset 0 -14px 32px rgba(150, 100, 15, 0.35);
     }
 
     .hanzo-btn-coral:hover {
-      background-color: #D63D3D;
+      background-color: #aa7514;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.3),
-        0 18px 36px -6px rgba(233, 78, 78, 0.6),
-        inset 0 -14px 32px rgba(150, 20, 20, 0.4);
+        0 18px 36px -6px rgba(192, 134, 26, 0.6),
+        inset 0 -14px 32px rgba(130, 85, 10, 0.4);
     }
 
     .hanzo-btn-navy {
-      background-color: #051D47;
+      background-color: #24576a;
       color: #FFFFFF;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.45),
-        0 14px 30px -6px rgba(5, 29, 71, 0.32),
+        0 14px 30px -6px rgba(36, 87, 106, 0.32),
         inset 0 -14px 36px rgba(0, 0, 0, 0.45);
     }
 
     .hanzo-btn-navy:hover {
-      background-color: #0B3D91;
+      background-color: #1e4959;
       box-shadow:
         0 0 0 8px rgba(255, 255, 255, 0.65),
-        0 18px 36px -6px rgba(11, 61, 145, 0.4),
+        0 18px 36px -6px rgba(36, 87, 106, 0.4),
         inset 0 -14px 36px rgba(0, 0, 0, 0.35);
     }
 
@@ -385,21 +385,21 @@
       height: 44px;
       border-radius: 9999px;
       background: #FFFFFF;
-      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25), 0 6px 14px rgba(5, 29, 71, 0.12);
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.25), 0 6px 14px rgba(36, 87, 106, 0.12);
       display: inline-flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 5px;
       cursor: pointer;
-      border: 1px solid rgba(11, 61, 145, 0.1);
+      border: 1px solid rgba(36, 87, 106, 0.15);
       transition: transform 0.25s ease, background-color 0.25s ease;
     }
 
     .hanzo-menu-bar {
       width: 18px;
       height: 2px;
-      background-color: #051D47;
+      background-color: #24576a;
       border-radius: 10px;
       transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
       transform-origin: 50% 50%;
@@ -463,22 +463,22 @@
        HANZO FAQ ACCORDION (HAIRLINE + ROTATING ORANGE/CORAL PLUS)
        ========================================================================== */
     .hanzo-faq-item {
-      border-bottom: 1px solid rgba(5, 29, 71, 0.16);
+      border-bottom: 1px solid rgba(36, 87, 106, 0.16);
       transition: background-color 0.25s ease;
     }
 
     .hanzo-faq-item:first-child {
-      border-top: 1px solid rgba(5, 29, 71, 0.16);
+      border-top: 1px solid rgba(36, 87, 106, 0.16);
     }
 
     .hanzo-faq-plus {
       transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.25s ease;
-      color: #FF3700;
+      color: #c0861a;
     }
 
     .hanzo-faq-item.is-open .hanzo-faq-plus {
       transform: rotate(45deg);
-      color: #E94E4E;
+      color: #c0861a;
     }
 
     .hanzo-faq-answer {
@@ -499,11 +499,11 @@
        ========================================================================== */
     .hanzo-footer-shell {
       position: relative;
-      border: 8px solid #E6ECF5;
-      background: radial-gradient(120% 120% at 20% 0%, #082963 0%, #051e4a 45%, #021233 100%);
+      border: 8px solid #d9e9ed;
+      background: radial-gradient(120% 120% at 20% 0%, #24576a 0%, #173b47 45%, #0e222a 100%);
       border-radius: 40px;
       overflow: hidden;
-      box-shadow: 0 24px 60px -15px rgba(2, 18, 51, 0.6);
+      box-shadow: 0 24px 60px -15px rgba(14, 34, 42, 0.6);
       isolation: isolate;
     }
 
@@ -511,7 +511,7 @@
     .hanzo-footer-spotlight {
       position: absolute;
       inset: 0;
-      background: radial-gradient(650px circle at var(--fx, 50%) var(--fy, 50%), rgba(96, 165, 250, 0.12), transparent 50%);
+      background: radial-gradient(650px circle at var(--fx, 50%) var(--fy, 50%), rgba(255, 255, 255, 0.05), transparent 50%);
       pointer-events: none;
       z-index: 2;
       opacity: 0;
@@ -528,6 +528,7 @@
       position: absolute;
       inset: 0;
       overflow: hidden;
+      opacity: 0.05;
       mask: radial-gradient(125% 100% at 0% 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.224) 88.2883%, rgba(0, 0, 0, 0) 100%);
       -webkit-mask: radial-gradient(125% 100% at 0% 0%, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.224) 88.2883%, rgba(0, 0, 0, 0) 100%);
       will-change: transform, opacity;
@@ -541,10 +542,10 @@
       height: 1269px;
       max-width: 960px;
       transform: skewX(45deg);
-      opacity: 0.13;
+      opacity: 0.05;
       overflow: hidden;
       will-change: transform, opacity;
-      animation: hanzoRaySweep 12s ease-in-out infinite alternate;
+      animation: hanzoRaySweep 14s ease-in-out infinite alternate;
     }
 
     .hanzo-ray-1 {
@@ -595,15 +596,15 @@
     @keyframes hanzoRaySweep {
       0% {
         transform: skewX(45deg) translate3d(0, 0, 0);
-        opacity: 0.08;
+        opacity: 0.03;
       }
       50% {
         transform: skewX(43deg) translate3d(24px, -12px, 0);
-        opacity: 0.16;
+        opacity: 0.06;
       }
       100% {
         transform: skewX(47deg) translate3d(-18px, 14px, 0);
-        opacity: 0.10;
+        opacity: 0.04;
       }
     }
 
@@ -612,8 +613,7 @@
       position: absolute;
       inset: 0;
       background-image: url('/assets/noise.png');
-      opacity: 0.10;
-      mix-blend-mode: overlay;
+      opacity: 0.03;
       pointer-events: none;
       z-index: 2;
     }
@@ -622,10 +622,6 @@
     .hanzo-footer-content {
       position: relative;
       z-index: 10;
-      will-change: transform, opacity;
-      transform: translate3d(0, 60px, 0);
-      opacity: 0.2;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease-out;
     }
 
     
@@ -763,7 +759,7 @@
     .croma-process-section {
       position: relative;
       background: transparent; /* Seamless with the rest of the page / previous fold */
-      color: #051D47;
+      color: #24576a;
       padding: 80px 0 100px 0;
       overflow: hidden;
     }
@@ -788,7 +784,7 @@
       font-size: 0.78rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: #E15A46; /* Coral accent */
+      color: #c0861a; /* Coral accent */
       margin-bottom: 0.75rem;
       font-weight: 600;
     }
@@ -796,15 +792,15 @@
       width: 6px;
       height: 6px;
       border-radius: 9999px;
-      background-color: #E15A46;
-      box-shadow: 0 0 8px rgba(225, 90, 70, 0.6);
+      background-color: #c0861a;
+      box-shadow: 0 0 8px rgba(192, 134, 26, 0.6);
     }
 
     .croma-main-title {
       font-size: clamp(2.2rem, 3.8vw, 3.5rem);
       font-weight: 600;
       letter-spacing: -0.035em;
-      color: #051D47; /* Navy 900 matching previous folds */
+      color: #24576a; /* Navy 900 matching previous folds */
       margin: 0;
       line-height: 1.08;
     }
@@ -822,28 +818,28 @@
       gap: 6px;
       padding: 9px 20px;
       border-radius: 9999px;
-      border: 1px solid rgba(5, 29, 71, 0.15);
+      border: 1px solid rgba(36, 87, 106, 0.15);
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      color: #051D47;
+      color: #24576a;
       font-size: 0.88rem;
       font-weight: 600;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(5, 29, 71, 0.06);
+      box-shadow: 0 2px 8px rgba(36, 87, 106, 0.06);
       transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
       cursor: pointer;
     }
     .croma-pill-btn:hover {
-      border-color: #E15A46;
-      color: #E15A46;
+      border-color: #c0861a;
+      color: #c0861a;
       background: #FFFFFF;
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(225, 90, 70, 0.2);
+      box-shadow: 0 6px 18px rgba(192, 134, 26, 0.2);
     }
     .croma-pill-btn sup {
       font-size: 0.72rem;
-      color: #E15A46;
+      color: #c0861a;
       font-weight: 700;
     }
 
@@ -852,25 +848,25 @@
       width: 42px;
       height: 42px;
       border-radius: 9999px;
-      border: 1px solid rgba(5, 29, 71, 0.15);
+      border: 1px solid rgba(36, 87, 106, 0.15);
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      color: #051D47;
+      color: #24576a;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 2px 8px rgba(5, 29, 71, 0.06);
+      box-shadow: 0 2px 8px rgba(36, 87, 106, 0.06);
       transition: all 0.25s ease;
       outline: none;
     }
     .croma-nav-arrow:hover {
-      border-color: #E15A46;
-      color: #E15A46;
+      border-color: #c0861a;
+      color: #c0861a;
       background: #FFFFFF;
       transform: scale(1.08);
-      box-shadow: 0 4px 14px rgba(225, 90, 70, 0.2);
+      box-shadow: 0 4px 14px rgba(192, 134, 26, 0.2);
     }
     .croma-nav-arrow:active {
       transform: scale(0.96);
@@ -901,7 +897,8 @@
       display: flex;
       gap: 2.75rem;
       width: max-content;
-      padding: 0 max(2rem, calc((100vw - 1400px) / 2 + 2rem));
+      margin: 0 auto;
+      padding: 0 max(2rem, calc((100vw - 1300px) / 2 + 2rem));
       align-items: center;
     }
 
@@ -922,7 +919,7 @@
       aspect-ratio: 1 / 1;
       border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 20px 45px -10px rgba(5, 29, 71, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.7);
+      box-shadow: 0 20px 45px -10px rgba(36, 87, 106, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.7);
       transform: rotate(var(--rot, 0deg));
       transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
       cursor: pointer;
@@ -930,7 +927,7 @@
 
     .croma-card-item:hover .croma-card-canvas {
       transform: rotate(0deg) translateY(-10px) scale(1.03);
-      box-shadow: 0 32px 65px -12px rgba(5, 29, 71, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.9);
+      box-shadow: 0 32px 65px -12px rgba(36, 87, 106, 0.32), 0 0 0 1px rgba(255, 255, 255, 0.9);
     }
 
     .croma-card-inner {
@@ -956,21 +953,21 @@
     }
     .croma-card-title-text {
       font-size: 0.92rem;
-      color: #051D47;
+      color: #24576a;
       font-weight: 600;
       letter-spacing: -0.01em;
       transition: color 0.25s ease;
     }
     .croma-card-item:hover .croma-card-title-text {
-      color: #E15A46;
+      color: #c0861a;
     }
     .croma-card-arrow {
       font-size: 0.9rem;
-      color: rgba(5, 29, 71, 0.45);
+      color: rgba(36, 87, 106, 0.45);
       transition: transform 0.25s ease, color 0.25s ease;
     }
     .croma-card-item:hover .croma-card-arrow {
-      color: #E15A46;
+      color: #c0861a;
       transform: translateX(4px);
     }
 
@@ -988,45 +985,57 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
       
       <!-- Brand Wordmark Pill (Hanzo .framer-1o9hqr0) -->
-      <a href="/" class="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-full shadow-[0_0_0_6px_rgba(255,255,255,0.22),0_8px_20px_rgba(5,29,71,0.12)] border border-white hover:scale-[1.02] transition-transform">
+      <a href="/" class="inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md px-5 py-2.5 rounded-full shadow-[0_0_0_6px_rgba(255,255,255,0.22),0_8px_20px_rgba(36,87,106,0.12)] border border-white hover:scale-[1.02] transition-transform">
         <img src="/assets/logo-icon.png" alt="Mentorize" class="w-7 h-7 object-contain" />
         <span class="text-lg font-semibold tracking-tight text-navy-900">Mentorize</span>
       </a>
 
       <!-- Center Navigation Pill Dock -->
-      <nav id="top-menu-nav" aria-label="Menu Principal" class="hidden md:flex items-center bg-white/90 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200/80 shadow-[0_0_0_6px_rgba(255,255,255,0.2),0_8px_20px_rgba(5,29,71,0.08)]">
-        <ul id="top-menu" class="flex items-center gap-1">
+      <nav id="top-menu-nav" aria-label="Menu Principal" class="hidden lg:flex items-center bg-white/90 backdrop-blur-md px-2 py-1.5 rounded-full border border-slate-200/80 shadow-[0_0_0_6px_rgba(255,255,255,0.2),0_8px_20px_rgba(36,87,106,0.08)]">
+        <ul id="top-menu" class="flex items-center gap-0.5 xl:gap-1">
           <li>
-            <a href="#sobre" class="nav-pill-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all">Sobre</a>
+            <a href="#sobre" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">Sobre</a>
           </li>
           <li>
-            <a href="#processo" class="nav-pill-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all">O Processo</a>
+            <a href="#processo" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">O Processo</a>
           </li>
           <li>
-            <a href="#faq" class="nav-pill-link px-4 py-1.5 rounded-full text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all">FAQ</a>
+            <a href="#quem-usa" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">Quem Usa</a>
+          </li>
+          <li>
+            <a href="#diferenciais" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">Diferenciais</a>
+          </li>
+          <li>
+            <a href="#como-funciona" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">Como Funciona</a>
+          </li>
+          <li>
+            <a href="#depoimentos" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">Depoimentos</a>
+          </li>
+          <li>
+            <a href="#faq" class="nav-pill-link px-2.5 xl:px-3.5 py-1.5 rounded-full text-xs xl:text-sm font-medium text-slate-700 hover:text-navy-900 hover:bg-navy-50 transition-all whitespace-nowrap">FAQ</a>
           </li>
         </ul>
       </nav>
 
       <!-- Right Action Pills & Search -->
-      <div class="hidden md:flex items-center gap-2.5">
+      <div class="hidden lg:flex items-center gap-2 xl:gap-2.5">
         <!-- Search toggle button -->
         <button type="button" id="search-toggle-btn" aria-label="Pesquisar" class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-navy-900 hover:bg-white flex items-center justify-center shadow-sm transition-all">
           <i data-lucide="search" class="w-4 h-4"></i>
         </button>
 
-        <a href="/login" class="px-5 py-2.5 rounded-full text-sm font-medium bg-white/90 backdrop-blur-md text-navy-900 hover:bg-white border border-slate-200/80 shadow-sm transition-all">
+        <a href="/login" class="px-4 xl:px-5 py-2.5 rounded-full text-xs xl:text-sm font-medium bg-white/90 backdrop-blur-md text-navy-900 hover:bg-white border border-slate-200/80 shadow-sm transition-all">
           Login
         </a>
 
-        <a href="/cadastro" class="px-5 py-2.5 rounded-full text-sm font-medium bg-coral hover:bg-coral-hover text-white shadow-lg shadow-coral/25 transition-all inline-flex items-center gap-1.5">
+        <a href="/cadastro" class="px-4 xl:px-5 py-2.5 rounded-full text-xs xl:text-sm font-medium bg-coral hover:bg-coral-hover text-white shadow-lg shadow-coral/25 transition-all inline-flex items-center gap-1.5">
           <span>Cadastre-se</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
 
       <!-- Mobile Menu Toggle (Hanzo 2-Bar Rotating Button) -->
-      <div class="flex md:hidden items-center gap-2">
+      <div class="flex lg:hidden items-center gap-2">
         <button type="button" id="mobile-search-btn" aria-label="Pesquisar" class="w-10 h-10 rounded-full bg-white/90 backdrop-blur-md border border-slate-200/80 text-navy-900 flex items-center justify-center shadow-sm">
           <i data-lucide="search" class="w-4 h-4"></i>
         </button>
@@ -1049,11 +1058,15 @@
     </div>
 
     <!-- Mobile Navigation Card (Hanzo Floating Menu Panel + Original "Escolha uma Página") -->
-    <div id="mobile-menu-panel" class="hidden md:hidden max-w-sm ml-auto mt-3 bg-white/95 backdrop-blur-xl rounded-3xl p-5 border border-slate-200/90 shadow-[0_0_0_8px_rgba(255,255,255,0.25),0_20px_40px_rgba(5,29,71,0.22)]">
+    <div id="mobile-menu-panel" class="hidden lg:hidden max-w-sm ml-auto mt-3 bg-white/95 backdrop-blur-xl rounded-3xl p-5 border border-slate-200/90 shadow-[0_0_0_8px_rgba(255,255,255,0.25),0_20px_40px_rgba(36,87,106,0.22)]">
       <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 px-3 mb-2">Escolha uma Página</div>
       <nav class="space-y-1">
         <a href="#sobre" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">Sobre</a>
         <a href="#processo" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">O Processo</a>
+        <a href="#quem-usa" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">Quem Usa</a>
+        <a href="#diferenciais" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">Diferenciais</a>
+        <a href="#como-funciona" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">Como Funciona</a>
+        <a href="#depoimentos" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">Depoimentos</a>
         <a href="#faq" class="mobile-nav-link block px-3 py-2.5 rounded-xl text-base font-medium text-navy-900 hover:bg-navy-50 transition-colors">FAQ</a>
       </nav>
       <div class="grid grid-cols-2 gap-2.5 mt-4 pt-4 border-t border-slate-100">
@@ -1068,39 +1081,47 @@
     <!-- ======================================================================
          HERO SECTION (LinguaPro Atmospheric Blue Photographic Background × Hanzo Display)
          ====================================================================== -->
-    <section class="relative min-h-[88vh] pt-36 pb-28 lg:pt-48 lg:pb-36 overflow-hidden flex items-center justify-center">
+    <section class="relative min-h-[85vh] pt-36 pb-20 lg:pt-44 lg:pb-24 overflow-hidden flex items-center justify-center">
       <!-- Exact LinguaPro DS Background Stack with Animated Academic Image & Navy-900 Multiply Blend -->
-      <div class="absolute inset-0 z-0 overflow-hidden bg-navy-900">
+      <div class="absolute inset-0 z-0 overflow-hidden bg-[#24576a]">
         <img
           src="/assets/hero-academic.avif"
           alt="Mentorize - Sua Plataforma de Mentoria On-line"
           class="w-full h-full object-cover hero-bg-animate"
           loading="eager"
         />
-        <div class="absolute inset-0 bg-navy-900/80 mix-blend-multiply"></div>
-        <div class="bg-gradient-to-t from-navy-900 via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
+        <div class="absolute inset-0 bg-[#24576a]/80 mix-blend-multiply"></div>
+        <div class="bg-gradient-to-t from-[#24576a] via-transparent to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <!-- Translucent Frosted Pill Badge with New Logo Icon -->
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3.5 py-1.5 mb-8 shadow-sm">
           <img src="/assets/logo-icon.png" alt="Mentorize" class="w-5 h-5 object-contain" />
-          <span class="text-sm font-medium text-white tracking-wider uppercase">Mentorize</span>
+          <span class="text-sm font-medium text-white tracking-wider uppercase">Mentorize-se</span>
         </div>
 
         <!-- Display Headline (LinguaPro Blue-to-White Gradient + Hanzo Blur-to-Sharp Reveal) -->
-        <h1 class="hanzo-display text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white mb-10 leading-[1.1]">
-          <span class="blur-word" style="animation-delay: 0.05s; margin-right: 0.28em;">A</span>
-          <span class="blur-word" style="animation-delay: 0.12s; margin-right: 0.28em;">sua</span>
-          <span class="blur-word" style="animation-delay: 0.19s;">plataforma</span>
+        <h1 class="hanzo-display text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white mb-6 leading-[1.1]">
+          <span class="blur-word" style="animation-delay: 0.05s; margin-right: 0.28em;">Encontre</span>
+          <span class="blur-word" style="animation-delay: 0.10s; margin-right: 0.28em;">o</span>
+          <span class="blur-word" style="animation-delay: 0.15s;">próximo</span>
           <br class="hidden md:block" />
-          <span class="blur-word bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-white" style="animation-delay: 0.28s;">de mentoria on-line</span>
+          <span class="blur-word bg-clip-text text-transparent bg-gradient-to-r from-[#b5d3dc] to-white" style="animation-delay: 0.22s; margin-right: 0.28em;">passo</span>
+          <span class="blur-word bg-clip-text text-transparent bg-gradient-to-r from-[#b5d3dc] to-white" style="animation-delay: 0.27s; margin-right: 0.28em;">da</span>
+          <span class="blur-word bg-clip-text text-transparent bg-gradient-to-r from-[#b5d3dc] to-white" style="animation-delay: 0.32s; margin-right: 0.28em;">sua</span>
+          <span class="blur-word bg-clip-text text-transparent bg-gradient-to-r from-[#b5d3dc] to-white" style="animation-delay: 0.37s;">carreira</span>
         </h1>
 
-        <!-- Centered Dual Action Buttons (Original Copy) -->
+        <!-- Subtitle Lede Copy (Imagem 2) -->
+        <p class="text-base sm:text-lg md:text-xl text-white/85 font-normal leading-relaxed max-w-2xl mx-auto mb-10">
+          Converse com profissionais que já percorreram caminhos parecidos com o seu e transforme reflexão em ação.
+        </p>
+
+        <!-- Centered Dual Action Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
           <a href="#mentorado" class="hanzo-btn hanzo-btn-coral w-full sm:w-auto justify-center">
-            <span>Por que ser Mentorado?</span>
+            <span>Encontrar um mentor</span>
             <span class="hanzo-arrow-slot" aria-hidden="true">
               <i data-lucide="arrow-right" class="hanzo-arrow-1"></i>
               <i data-lucide="arrow-right" class="hanzo-arrow-2"></i>
@@ -1108,12 +1129,63 @@
           </a>
 
           <a href="#mentor" class="hanzo-btn hanzo-btn-glass w-full sm:w-auto justify-center">
-            <span>Por que ser Mentor?</span>
+            <span>Quero ser mentor</span>
             <span class="hanzo-arrow-slot" aria-hidden="true">
               <i data-lucide="arrow-right" class="hanzo-arrow-1"></i>
               <i data-lucide="arrow-right" class="hanzo-arrow-2"></i>
             </span>
           </a>
+        </div>
+
+        <!-- Microcopy Below Buttons (Imagem 2) -->
+        <p class="text-xs sm:text-sm text-white/75 font-normal tracking-wide mt-6">
+          Videoconferência &middot; sessões de até 1h30 &middot; valor definido por cada mentor
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SECTION: ESTATÍSTICAS / MÉTRICAS (LinguaPro Hero Statistics Counter Dock)
+         ====================================================================== -->
+    <section id="metricas" class="relative z-10 bg-[#183b48] border-t border-b border-white/10 overflow-hidden">
+      <!-- Atmospheric Background continuation matching Hero (#24576a) -->
+      <div class="absolute inset-0 z-0 bg-[#24576a]">
+        <img
+          src="/assets/hero-academic.avif"
+          alt=""
+          class="w-full h-full object-cover object-bottom opacity-35 mix-blend-multiply"
+          loading="lazy"
+        />
+        <div class="absolute inset-0 bg-[#183b48]/85 backdrop-blur-md"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <!-- Eyebrow: Mentorize em números (Instrument Serif italic between fading rules - Imagem 3) -->
+        <div class="flex justify-center mb-8 sm:mb-10 reveal-on-scroll">
+          <div class="hanzo-eyebrow">
+            <span class="hanzo-rule-left-light"></span>
+            <span class="hanzo-eyebrow-text text-white/95">Mentorize em números</span>
+            <span class="hanzo-rule-right-light"></span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+          <div class="reveal-on-scroll">
+            <div class="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white leading-none">[000]</div>
+            <div class="text-sm sm:text-base text-slate-200/90 font-medium mt-2">sessões realizadas</div>
+          </div>
+          <div class="reveal-on-scroll">
+            <div class="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white leading-none">[000]</div>
+            <div class="text-sm sm:text-base text-slate-200/90 font-medium mt-2">mentores ativos</div>
+          </div>
+          <div class="reveal-on-scroll">
+            <div class="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white leading-none">[0,0]</div>
+            <div class="text-sm sm:text-base text-slate-200/90 font-medium mt-2">avaliação média das mentorias</div>
+          </div>
+          <div class="reveal-on-scroll">
+            <div class="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white leading-none">[00]</div>
+            <div class="text-sm sm:text-base text-slate-200/90 font-medium mt-2">áreas de atuação</div>
+          </div>
         </div>
       </div>
     </section>
@@ -1144,7 +1216,7 @@
         <!-- Two-tone Hanzo Heading 2 -->
         <div class="max-w-4xl mx-auto text-center mb-14 reveal-on-scroll">
           <h2 class="hanzo-h2 text-3xl sm:text-5xl lg:text-[3.35rem] text-navy-900">
-            O Mentorize é uma plataforma de <span class="text-navy/60">mentoria on-line.</span>
+            Mentorize é uma plataforma de <span class="text-navy/60">mentoria on-line.</span>
           </h2>
         </div>
 
@@ -1171,7 +1243,7 @@
                 Existimos para contribuir com o desenvolvimento de pessoas e carreiras a partir de um ambiente colaborativo, que permite o compartilhamento de conhecimento e experiências entre profissionais.
               </p>
 
-              <div class="h-px w-full bg-navy-900/10"></div>
+              <div class="h-px w-full bg-[#24576a]/10"></div>
 
               <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
                 É o lugar de quem acredita que um propósito transforma realidades. Um convite ao autoconhecimento e ao networking.
@@ -1198,9 +1270,10 @@
     </section>
 
     <!-- ======================================================================
-         SECTION: O MENTOR (#mentor)
+         SECTION: O MENTOR (#mentor / #quem-usa)
          (LinguaPro Featured Dark Navy-900 Surface × Hanzo Tilted Frame & Coral CTA)
          ====================================================================== -->
+    <div id="quem-usa" class="scroll-mt-24"></div>
     <section id="mentor" class="relative py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="hanzo-dark-frame relative overflow-hidden p-8 sm:p-12 lg:p-16 text-white">
@@ -1346,7 +1419,7 @@
         <!-- Action Pill & Navigation Controls Centered -->
         <div class="flex items-center justify-center gap-3">
           <a href="#cadastro" class="croma-pill-btn" title="Ver etapas">
-            <span>7 Passos</span><sup>(07)</sup>
+            <span>3 Passos</span><sup>(03)</sup>
           </a>
           <button id="croma-prev-btn" class="croma-nav-arrow" aria-label="Voltar etapa" title="Etapa anterior">
             <i data-lucide="arrow-left" class="w-4 h-4"></i>
@@ -1363,43 +1436,53 @@
         <div class="croma-gallery-track">
 
           <!-- ============================================================
-               CARD 1: PASSO 1
+               CARD 1: ETAPA 1 - CRIE SEU PERFIL (Imagem 2)
                ============================================================ -->
-          <div class="croma-card-item" style="--rot: -7deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
+          <div class="croma-card-item" style="--rot: -4deg;">
+            <div class="croma-card-canvas" style="background: #24576a;">
               <div class="croma-card-inner text-white">
                 
                 <!-- Top Row: Pill Badge + Icon -->
                 <div class="flex items-center justify-between">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase text-white">
-                    01 · CADASTRO
+                    01 · PERFIL
                   </span>
                   <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
                     <i data-lucide="user-plus" class="w-5 h-5"></i>
                   </div>
                 </div>
 
-                <!-- Middle Visual UI Mockup -->
+                <!-- Middle Visual UI Mockup (Profile Objective, 5 Interest Tags & Availability) -->
                 <div class="my-auto py-2">
-                  <div class="p-4 rounded-2xl bg-black/25 backdrop-blur-md border border-white/15 space-y-2.5 shadow-lg">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                      <span class="text-xs font-mono text-white/80">cadastro_rapido.form</span>
+                  <div class="p-3.5 rounded-2xl bg-black/25 backdrop-blur-md border border-white/15 space-y-2.5 shadow-lg">
+                    <div class="flex items-center justify-between">
+                      <div class="text-[11px] font-mono text-white/80">objetivo_carreira.set</div>
+                      <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-emerald-400/20 text-emerald-300 border border-emerald-400/30">5 áreas</span>
                     </div>
-                    <div class="px-3 py-2 rounded-xl bg-white/10 border border-white/10 text-xs text-white/90 font-medium">
-                      seu-email@mentorize.com.br
+                    <!-- 5 Áreas de Interesse -->
+                    <div class="flex flex-wrap gap-1.5">
+                      <span class="px-2 py-0.5 rounded-md bg-white/20 border border-white/30 text-white text-[11px] font-medium">Tecnologia</span>
+                      <span class="px-2 py-0.5 rounded-md bg-white/15 border border-white/20 text-white/90 text-[11px] font-medium">Liderança</span>
+                      <span class="px-2 py-0.5 rounded-md bg-white/15 border border-white/20 text-white/90 text-[11px] font-medium">Carreira</span>
+                      <span class="px-2 py-0.5 rounded-md bg-white/15 border border-white/20 text-white/90 text-[11px] font-medium">Negócios</span>
+                      <span class="px-2 py-0.5 rounded-md bg-white/20 border border-white/30 text-white text-[11px] font-medium">Inovação</span>
                     </div>
-                    <div class="px-3 py-2 rounded-xl bg-white text-[#172d3f] font-bold text-xs text-center shadow-md">
-                      Criar Conta Gratuita →
+                    <!-- Dias e Horários Disponíveis -->
+                    <div class="px-2.5 py-1.5 rounded-xl bg-white/10 border border-white/10 flex items-center justify-between text-[11px] text-white/90">
+                      <div class="flex items-center gap-1.5">
+                        <i data-lucide="calendar" class="w-3.5 h-3.5 text-cyan-300"></i>
+                        <span>Dias e horários definidos</span>
+                      </div>
+                      <span class="text-cyan-300 font-semibold">19:00 — 21:00</span>
                     </div>
                   </div>
                 </div>
 
-                <!-- Bottom Text: Step Number + Original Copy -->
+                <!-- Bottom Text: Step Number + Exact Copy Imagem 2 -->
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 1</h3>
-                  <p class="text-sm text-white/85 leading-relaxed font-normal">
-                    Faça seu cadastro no site.
+                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Crie seu perfil</h3>
+                  <p class="text-sm text-white/90 leading-relaxed font-normal">
+                    Conte seu objetivo, escolha até 5 áreas de interesse e informe os dias e horários em que pode conversar.
                   </p>
                 </div>
 
@@ -1407,131 +1490,29 @@
             </div>
             <!-- Below Card Caption Link (Croma style) -->
             <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 1 — Cadastro no Site</span>
+              <span class="croma-card-title-text">Passo 1 — Crie seu Perfil</span>
               <span class="croma-card-arrow">→</span>
             </div>
           </div>
 
           <!-- ============================================================
-               CARD 2: PASSO 2
+               CARD 2: ETAPA 2 - ESCOLHA UM MENTOR (Imagem 3)
                ============================================================ -->
-          <div class="croma-card-item" style="--rot: -3deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
+          <div class="croma-card-item" style="--rot: 2deg;">
+            <div class="croma-card-canvas" style="background: #24576a;">
               <div class="croma-card-inner text-white">
                 
                 <!-- Top Row: Pill Badge + Icon -->
                 <div class="flex items-center justify-between">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-semibold tracking-wider uppercase text-white">
-                    02 · OBJETIVOS
+                    02 · ESCOLHA
                   </span>
                   <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center text-white">
-                    <i data-lucide="target" class="w-5 h-5"></i>
+                    <i data-lucide="compass" class="w-5 h-5"></i>
                   </div>
                 </div>
 
-                <!-- Middle Visual UI Mockup (Interest & Career Tags) -->
-                <div class="my-auto py-2">
-                  <div class="p-4 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 space-y-2 shadow-lg">
-                    <div class="text-[11px] font-serif italic text-white/60">Áreas de Interesse Selecionadas:</div>
-                    <div class="flex flex-wrap gap-1.5">
-                      <span class="px-2.5 py-1 rounded-lg bg-white/20 border border-white/30 text-white text-xs font-medium">Tecnologia</span>
-                      <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-white/90 text-xs font-medium">Liderança</span>
-                      <span class="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-white/90 text-xs font-medium">Carreira</span>
-                      <span class="px-2.5 py-1 rounded-lg bg-white/20 border border-white/30 text-white text-xs font-medium">Negócios</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Bottom Text: Step Number + Original Copy -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 2</h3>
-                  <p class="text-sm text-white/80 leading-relaxed font-normal">
-                    Informe suas áreas de interesse e seu objetivo de carreira.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-            <!-- Below Card Caption Link (Croma style) -->
-            <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 2 — Interesses &amp; Metas</span>
-              <span class="croma-card-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- ============================================================
-               CARD 3: PASSO 3
-               ============================================================ -->
-          <div class="croma-card-item" style="--rot: 4deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
-              <div class="croma-card-inner text-white">
-                
-                <!-- Top Row: Pill Badge + Icon -->
-                <div class="flex items-center justify-between">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase text-white">
-                    03 · DISPONIBILIDADE
-                  </span>
-                  <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
-                    <i data-lucide="calendar-clock" class="w-5 h-5"></i>
-                  </div>
-                </div>
-
-                <!-- Middle Visual UI Mockup (Calendar Grid & Time Slot) -->
-                <div class="my-auto py-2">
-                  <div class="p-3.5 rounded-2xl bg-black/25 backdrop-blur-md border border-white/15 space-y-2.5 shadow-lg">
-                    <div class="flex justify-between items-center text-xs font-medium text-white/90 px-1">
-                      <span>Dias da Semana</span>
-                      <span class="text-cyan-300 text-[11px]">3 disponíveis</span>
-                    </div>
-                    <div class="grid grid-cols-5 gap-1.5 text-center text-xs font-bold">
-                      <div class="py-1.5 rounded-lg bg-white/10 text-white/60">SEG</div>
-                      <div class="py-1.5 rounded-lg bg-white text-[#172d3f] shadow">TER</div>
-                      <div class="py-1.5 rounded-lg bg-white/10 text-white/60">QUA</div>
-                      <div class="py-1.5 rounded-lg bg-white text-[#172d3f] shadow">QUI</div>
-                      <div class="py-1.5 rounded-lg bg-white text-[#172d3f] shadow">SEX</div>
-                    </div>
-                    <div class="px-2.5 py-1.5 rounded-lg bg-white/15 text-center text-xs text-white font-medium flex items-center justify-center gap-2">
-                      <i data-lucide="clock" class="w-3.5 h-3.5"></i>
-                      <span>19:00 — 21:00 (On-line)</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Bottom Text: Step Number + Original Copy -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 3</h3>
-                  <p class="text-sm text-white/90 leading-relaxed font-normal">
-                    Especifique dias e horários disponíveis para realizar as mentorias on-line.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-            <!-- Below Card Caption Link (Croma style) -->
-            <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 3 — Agenda &amp; Horários</span>
-              <span class="croma-card-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- ============================================================
-               CARD 4: PASSO 4
-               ============================================================ -->
-          <div class="croma-card-item" style="--rot: 7.5deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
-              <div class="croma-card-inner text-white">
-                
-                <!-- Top Row: Pill Badge + Icon -->
-                <div class="flex items-center justify-between">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase text-white">
-                    04 · MATCHING
-                  </span>
-                  <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
-                    <i data-lucide="users" class="w-5 h-5"></i>
-                  </div>
-                </div>
-
-                <!-- Middle Visual UI Mockup (Profile Matching Cards) -->
+                <!-- Middle Visual UI Mockup (Mentor Recommendation, Mini-Bio & Invitation) -->
                 <div class="my-auto py-2">
                   <div class="p-3.5 rounded-2xl bg-black/25 backdrop-blur-md border border-white/15 space-y-2 shadow-lg">
                     <div class="flex items-center justify-between">
@@ -1546,17 +1527,28 @@
                         98% MATCH
                       </span>
                     </div>
-                    <div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
-                      <div class="bg-white h-full rounded-full" style="width: 98%;"></div>
+                    <!-- Minicurrículo -->
+                    <div class="p-2 rounded-xl bg-white/10 text-[11px] text-slate-200 leading-snug">
+                      "10+ anos de experiência acelerando líderes e carreiras de alta performance."
+                    </div>
+                    <!-- Enviar Convite com Prazo -->
+                    <div class="flex items-center justify-between pt-0.5">
+                      <span class="text-[10px] text-white/70 flex items-center gap-1">
+                        <i data-lucide="clock" class="w-3 h-3 text-cyan-300"></i>
+                        Resposta em até 3 dias úteis
+                      </span>
+                      <span class="px-2.5 py-1 rounded-lg bg-white text-[#24576a] font-bold text-[11px] shadow">
+                        Enviar Convite →
+                      </span>
                     </div>
                   </div>
                 </div>
 
-                <!-- Bottom Text: Step Number + Original Copy -->
+                <!-- Bottom Text: Step Number + Exact Copy Imagem 3 -->
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 4</h3>
+                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Escolha um mentor</h3>
                   <p class="text-sm text-white/90 leading-relaxed font-normal">
-                    Veja quais são os mentores ou mentorados que têm o perfil parecido com o seu.
+                    Busque por área ou objetivo, leia o minicurrículo e envie o convite. O mentor tem até 3 dias úteis para responder.
                   </p>
                 </div>
 
@@ -1564,128 +1556,34 @@
             </div>
             <!-- Below Card Caption Link (Croma style) -->
             <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 4 — Match de Perfis</span>
+              <span class="croma-card-title-text">Passo 2 — Escolha um Mentor</span>
               <span class="croma-card-arrow">→</span>
             </div>
           </div>
 
           <!-- ============================================================
-               CARD 5: PASSO 5
+               CARD 3: ETAPA 3 - COMECE A CONVERSAR (Imagem 4)
                ============================================================ -->
-          <div class="croma-card-item" style="--rot: -5.5deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
+          <div class="croma-card-item" style="--rot: -3deg;">
+            <div class="croma-card-canvas" style="background: #24576a;">
               <div class="croma-card-inner text-white">
                 
                 <!-- Top Row: Pill Badge + Icon -->
                 <div class="flex items-center justify-between">
                   <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase text-white">
-                    05 · CONTATO
-                  </span>
-                  <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
-                    <i data-lucide="message-square" class="w-5 h-5"></i>
-                  </div>
-                </div>
-
-                <!-- Middle Visual UI Mockup (Dialogue Preview) -->
-                <div class="my-auto py-2">
-                  <div class="p-3.5 rounded-2xl bg-black/25 backdrop-blur-md border border-white/15 space-y-2 shadow-lg">
-                    <div class="p-2.5 rounded-xl bg-white/15 text-xs text-white/95 rounded-bl-sm">
-                      "Olá! Adoraria agendar uma sessão de mentoria com você."
-                    </div>
-                    <div class="flex items-center justify-end gap-1.5 text-[11px] text-cyan-200">
-                      <span>Mensagem Direta</span>
-                      <i data-lucide="check" class="w-3.5 h-3.5 text-cyan-200"></i>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Bottom Text: Step Number + Original Copy -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 5</h3>
-                  <p class="text-sm text-white/90 leading-relaxed font-normal">
-                    Entre em contato com o mentor ou mentorado escolhido.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-            <!-- Below Card Caption Link (Croma style) -->
-            <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 5 — Primeiro Contato</span>
-              <span class="croma-card-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- ============================================================
-               CARD 6: PASSO 6
-               ============================================================ -->
-          <div class="croma-card-item" style="--rot: 3.5deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
-              <div class="croma-card-inner text-white">
-                
-                <!-- Top Row: Pill Badge + Icon -->
-                <div class="flex items-center justify-between">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-500/40 text-xs font-semibold tracking-wider uppercase text-emerald-300">
-                    06 · CONFIRMAÇÃO
-                  </span>
-                  <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center text-emerald-400">
-                    <i data-lucide="mail-check" class="w-5 h-5"></i>
-                  </div>
-                </div>
-
-                <!-- Middle Visual UI Mockup (Invitation Acceptance) -->
-                <div class="my-auto py-2">
-                  <div class="p-3.5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 space-y-2 shadow-lg">
-                    <div class="flex items-center gap-2 text-emerald-400 text-xs font-bold">
-                      <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-                      <span>Convite Aceito com Sucesso!</span>
-                    </div>
-                    <div class="text-[11px] text-slate-300 leading-snug">
-                      Data e link da sala de mentoria adicionados à sua agenda.
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Bottom Text: Step Number + Original Copy -->
-                <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 6</h3>
-                  <p class="text-sm text-slate-300 leading-relaxed font-normal">
-                    Aguarde o aceite de seu convite para iniciar o processo.
-                  </p>
-                </div>
-
-              </div>
-            </div>
-            <!-- Below Card Caption Link (Croma style) -->
-            <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 6 — Confirmação de Convite</span>
-              <span class="croma-card-arrow">→</span>
-            </div>
-          </div>
-
-          <!-- ============================================================
-               CARD 7: PASSO 7
-               ============================================================ -->
-          <div class="croma-card-item" style="--rot: -4deg;">
-            <div class="croma-card-canvas" style="background: #172d3f;">
-              <div class="croma-card-inner text-white">
-                
-                <!-- Top Row: Pill Badge + Icon -->
-                <div class="flex items-center justify-between">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs font-semibold tracking-wider uppercase text-white">
-                    07 · AO VIVO
+                    03 · CONVERSA
                   </span>
                   <div class="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white">
                     <i data-lucide="video" class="w-5 h-5"></i>
                   </div>
                 </div>
 
-                <!-- Middle Visual UI Mockup (Live Video Session) -->
+                <!-- Middle Visual UI Mockup (Videoconference & Flexible Schedule) -->
                 <div class="my-auto py-2">
                   <div class="p-3.5 rounded-2xl bg-black/25 backdrop-blur-md border border-white/15 space-y-2 shadow-lg">
                     <div class="flex items-center justify-between text-xs">
-                      <div class="flex items-center gap-1.5 text-rose-400 font-bold">
-                        <span class="w-2 h-2 rounded-full bg-rose-500 animate-ping"></span>
+                      <div class="flex items-center gap-1.5 text-emerald-400 font-bold">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                         <span>SALA AO VIVO</span>
                       </div>
                       <span class="text-white/70 font-mono text-[11px]">45:00</span>
@@ -1698,14 +1596,18 @@
                         Você
                       </div>
                     </div>
+                    <div class="flex items-center justify-center gap-1.5 text-[10px] text-cyan-200 pt-0.5">
+                      <i data-lucide="sparkles" class="w-3 h-3"></i>
+                      <span>Videoconferência no ritmo combinado</span>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Bottom Text: Step Number + Original Copy -->
+                <!-- Bottom Text: Step Number + Exact Copy Imagem 4 -->
                 <div>
-                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Passo 7</h3>
+                  <h3 class="text-2xl font-bold tracking-tight text-white mb-1.5">Comece a conversar</h3>
                   <p class="text-sm text-white/90 leading-relaxed font-normal">
-                    Após a solicitação ser aceita, comece a sua mentoria on-line.
+                    Com o convite aceito, os encontros acontecem por videoconferência, no ritmo que vocês combinarem.
                   </p>
                 </div>
 
@@ -1713,7 +1615,7 @@
             </div>
             <!-- Below Card Caption Link (Croma style) -->
             <div class="croma-card-meta">
-              <span class="croma-card-title-text">Passo 7 — Início da Mentoria On-line</span>
+              <span class="croma-card-title-text">Passo 3 — Comece a Conversar</span>
               <span class="croma-card-arrow">→</span>
             </div>
           </div>
@@ -1911,8 +1813,8 @@
   <!-- ========================================================================
        FOOTER (Hanzo Framed Deep Blue Footer with Scroll-Driven Reveal)
        ======================================================================== -->
-  <footer id="main-footer" class="px-3 sm:px-6 pb-6 pt-6">
-    <div class="max-w-7xl mx-auto hanzo-footer-shell text-white py-20 sm:py-28 px-6 sm:px-12">
+  <footer id="main-footer" class="relative px-3 sm:px-6 pb-6 pt-2">
+    <div class="max-w-7xl mx-auto hanzo-footer-shell text-white py-16 sm:py-24 px-6 sm:px-12">
       <!-- Interactive Ambient Mouse Spotlight -->
       <div class="hanzo-footer-spotlight" aria-hidden="true"></div>
 
@@ -1931,50 +1833,58 @@
       <!-- Main Footer Content Area (Scroll-Driven Emergence) -->
       <div class="hanzo-footer-content flex flex-col justify-between min-h-[440px] sm:min-h-[500px]">
         
-        <!-- Central CTA Block (Matches Hanzo Specimen in media_1795036025784_3a95c5df.jpg) -->
-        <div class="my-auto text-center max-w-2xl mx-auto py-6 sm:py-10">
+        <!-- Central CTA Block (Matches Hanzo .framer-divrc2 CTA: descends downward from top on scroll) -->
+        <div id="footer-cta-block" class="my-auto text-center max-w-2xl mx-auto py-6 sm:py-10 will-change-transform" style="transform: translate3d(0, -280px, 0); opacity: 0.2;">
           
           <!-- Brand Logo 3D -->
           <div class="flex justify-center mb-7">
             <img
               src="/assets/logo-mentorize-full.png"
               alt="Mentorize - Sua Plataforma de Mentoria On-line"
-              class="h-12 sm:h-14 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity"
+              class="h-12 sm:h-14 w-auto object-contain opacity-100 transition-opacity"
             />
           </div>
 
           <!-- Eyebrow with Delicate Fading Gradient Rules -->
           <div class="inline-flex items-center justify-center gap-5 mb-5">
             <div class="w-12 sm:w-16 h-px bg-gradient-to-r from-transparent to-white/40"></div>
-            <span class="font-serif italic text-lg sm:text-xl text-white/75 tracking-wide">Mentorize-se</span>
+            <span class="font-serif italic text-lg sm:text-xl text-white/95 tracking-wide">Mentorize-se</span>
             <div class="w-12 sm:w-16 h-px bg-gradient-to-l from-transparent to-white/40"></div>
           </div>
 
-          <!-- Two-Tone Display Headline (White + 45% Opacity White) -->
+          <!-- Two-Tone Display Headline (White + 55% Opacity White) -->
           <h2 class="text-4xl sm:text-6xl md:text-7xl font-normal tracking-[-0.05em] text-white leading-[1.05] mb-5">
-            Cadastre-se <span class="text-white/45">Agora</span>
+            Pronto para dar o seu próximo <span class="text-white/55">passo?</span>
           </h2>
 
           <!-- Clean Lede Description (Original Mentorize Copy) -->
-          <p class="text-sm sm:text-base md:text-lg text-white/70 font-normal leading-relaxed max-w-xl mx-auto mb-9">
+          <p class="text-sm sm:text-base md:text-lg text-slate-100 font-normal leading-relaxed max-w-xl mx-auto mb-9">
             Faça parte da plataforma de mentoria on-line e conecte-se com profissionais experientes para acelerar o seu desenvolvimento.
           </p>
 
-          <!-- Primary CTA Buttons (Hanzo Dark Pill with Sliding Arrow) -->
-          <div class="flex flex-wrap items-center justify-center gap-4">
-            <a href="/cadastro" class="hanzo-cta-pill group">
-              <span>Quero me Cadastrar</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 text-white/80 transition-transform duration-300 group-hover:translate-x-1.5"></i>
+          <!-- Dual Action Buttons (Matches Hero Specimen in media_1795540675601_2ea5073d.png) -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#mentorado" class="hanzo-btn hanzo-btn-coral w-full sm:w-auto justify-center">
+              <span>Encontrar um mentor</span>
+              <span class="hanzo-arrow-slot" aria-hidden="true">
+                <i data-lucide="arrow-right" class="hanzo-arrow-1"></i>
+                <i data-lucide="arrow-right" class="hanzo-arrow-2"></i>
+              </span>
             </a>
-            <a href="/login" class="hanzo-cta-pill group !border-white/20 !bg-white/5 hover:!border-white/50">
-              <span class="text-white/80">Já tenho conta</span>
+
+            <a href="#mentor" class="hanzo-btn hanzo-btn-glass w-full sm:w-auto justify-center">
+              <span>Quero ser mentor</span>
+              <span class="hanzo-arrow-slot" aria-hidden="true">
+                <i data-lucide="arrow-right" class="hanzo-arrow-1"></i>
+                <i data-lucide="arrow-right" class="hanzo-arrow-2"></i>
+              </span>
             </a>
           </div>
 
         </div>
 
         <!-- Bottom Content Bar (.framer-wz2oom) -->
-        <div class="pt-8 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div id="footer-bottom-bar" class="pt-8 border-t border-white/15 flex flex-col md:flex-row items-center justify-between gap-6" style="opacity:0.25; transform:translate3d(0, 10px, 0); will-change:opacity,transform;">
           
           <!-- Bottom Left: Copyright Badge Pill (.framer-1ru8xec) -->
           <div class="hanzo-copyright-pill">
@@ -2266,41 +2176,53 @@
         }, { passive: true });
       }
 
-      // 8. Scroll-Driven Footer Emergence (Hanzo scroll-linked reveal)
+      // 8. Scroll-Driven Footer Emergence (Hanzo scroll-linked copy reveal from design-system.html)
       var footerEl = document.getElementById('main-footer');
       var footerShell = footerEl ? footerEl.querySelector('.hanzo-footer-shell') : null;
       var footerRays = footerEl ? footerEl.querySelector('.hanzo-footer-rays') : null;
-      var footerContent = footerEl ? footerEl.querySelector('.hanzo-footer-content') : null;
+      var footerCtaBlock = document.getElementById('footer-cta-block');
+      var footerBottomBar = document.getElementById('footer-bottom-bar');
 
       function updateFooterScroll() {
-        if (!footerEl) return;
-        var rect = footerEl.getBoundingClientRect();
+        if (!footerEl || !footerCtaBlock) return;
         var vh = window.innerHeight || document.documentElement.clientHeight;
-        
-        // Progress: 0 when footer top touches bottom of screen (vh), 1 when footer is in view
-        var totalDistance = rect.height + vh * 0.4;
+        var rect = footerShell ? footerShell.getBoundingClientRect() : footerEl.getBoundingClientRect();
+
+        // Total distance over which the animation unfolds as user scrolls into the footer:
+        // Starts when the top of the footer shell enters the bottom of the viewport (rect.top <= vh)
+        // Reaches 100% when card is comfortably centered in view
+        var totalDistance = Math.min(vh * 0.65, rect.height * 0.75);
         var currentDistance = vh - rect.top;
-        var progress = currentDistance / totalDistance;
+        var progress = currentDistance / Math.max(1, totalDistance);
         progress = Math.max(0, Math.min(1, progress));
 
-        // Rays emergence: intensifies and opens up with mouse scroll
+        // Hanzo CTA descent: starts clipped at top border with negative translateY (-280px),
+        // descends smoothly downwards to 0px as the user scrolls down, with full crisp opacity reaching 1.0
+        var ctaY = (1 - progress) * -280;
+        var ctaOpacity = 0.35 + progress * 0.65;
+        if (progress >= 0.80) ctaOpacity = 1.0;
+
+        footerCtaBlock.style.transform = 'translate3d(0, ' + ctaY.toFixed(1) + 'px, 0)';
+        footerCtaBlock.style.opacity = ctaOpacity.toFixed(3);
+
+        // Subtle ambient light rays (capped at max 0.06 opacity so dark background remains crisp and deep)
         if (footerRays) {
-          var rayY = (1 - progress) * -40;
-          var rayScale = 0.95 + progress * 0.05;
-          var rayOpacity = 0.35 + progress * 0.65;
-          footerRays.style.transform = 'translate3d(0, ' + rayY.toFixed(1) + 'px, 0) scale(' + rayScale.toFixed(3) + ')';
+          var rayY = (1 - progress) * -30;
+          var rayOpacity = 0.03 + progress * 0.03;
+          footerRays.style.transform = 'translate3d(0, ' + rayY.toFixed(1) + 'px, 0)';
           footerRays.style.opacity = rayOpacity.toFixed(3);
         }
 
-        // CTA Content emergence: smoothly rises and comes into crisp full focus
-        if (footerContent) {
-          var contentY = (1 - progress) * 60;
-          var contentOpacity = 0.15 + progress * 0.85;
-          footerContent.style.transform = 'translate3d(0, ' + contentY.toFixed(1) + 'px, 0)';
-          footerContent.style.opacity = contentOpacity.toFixed(3);
+        // Bottom bar (copyright & social icons)
+        if (footerBottomBar) {
+          var pBar = Math.max(0, Math.min(1, (progress - 0.30) / 0.50));
+          var opBar = 0.40 + pBar * 0.60;
+          var yBar = (1 - pBar) * 12;
+          footerBottomBar.style.opacity = opBar.toFixed(3);
+          footerBottomBar.style.transform = 'translate3d(0, ' + yBar.toFixed(1) + 'px, 0)';
         }
 
-        // Hide fixed header when footer is in view to keep footer completely clean and unobstructed
+        // Hide floating header when approaching footer so it doesn't obstruct the framed card
         if (headerEl) {
           if (rect.top < vh * 0.9) {
             headerEl.style.transform = 'translateY(-130%)';
